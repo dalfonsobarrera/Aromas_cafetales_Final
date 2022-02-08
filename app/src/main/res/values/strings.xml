@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ProjectAromasCafetales</string>
     <string name="image_splash_ac">Splash</string>
+    <string name="email">Correo electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="sign_in">Inciar Sesión</string>
+    <string name="does_not_have_account"><u>¡No tienes Cuenta Resgistrate!</u></string>
 </resources>
