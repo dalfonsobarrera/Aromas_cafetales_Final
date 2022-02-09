@@ -21,9 +21,9 @@ class LoginActivity : AppCompatActivity() {
 
         val credentials = intent.extras
         if (credentials != null) {
-            //credentials.getString("name")
-            //credentials.getString("telephone")
-            //credentials.getString("brand")
+            credentials.getString("name")
+            credentials.getString("telephone")
+            credentials.getString("brand")
             emailReceived = credentials.getString("email")
             passwordReceived = credentials.getString("password")
         }
