@@ -16,17 +16,15 @@ class LoginActivity : AppCompatActivity() {
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
 
-        var nameReceived : String?= ""
-        var telephoneReceived : String?= ""
-        var brandReceived : String?= ""
+
         var emailReceived : String?= ""
         var passwordReceived : String?= ""
 
         val credentials = intent.extras
         if (credentials != null) {
-            nameReceived = credentials.getString("name")
-            telephoneReceived = credentials.getString("telephone")
-            brandReceived = credentials.getString("brand")
+            credentials.getString("name")
+            credentials.getString("telephone")
+            credentials.getString("brand")
             emailReceived = credentials.getString("email")
             passwordReceived = credentials.getString("password")
         }

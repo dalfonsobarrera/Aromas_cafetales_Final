@@ -20,16 +20,16 @@ class RegisterActivity : AppCompatActivity() {
                 val telephone = telephoneEditText.text.toString()
                 val brand = brandEditText.text.toString()
                 val email = emailEditText.text.toString()
-                val passsword = passwordEditText.text.toString()
+                val password = passwordEditText.text.toString()
                 val repPassword = repPasswordEditText.text.toString()
 
-                if (passsword == repPassword){
+                if (password == repPassword){
                     val intent= Intent(this@RegisterActivity, LoginActivity::class.java )
                     intent.putExtra("name", name)
                     intent.putExtra("telephone", telephone)
                     intent.putExtra("brand", brand)
                     intent.putExtra("email", email)
-                    intent.putExtra("password", passsword)
+                    intent.putExtra("password", password)
                     startActivity(intent)
                 } else
                     Toast.makeText(applicationContext, "Las contraseñas no coinciden ", Toast.LENGTH_SHORT).show()
