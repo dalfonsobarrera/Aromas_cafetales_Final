@@ -16,15 +16,14 @@ class LoginActivity : AppCompatActivity() {
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
 
-
         var emailReceived : String?= ""
         var passwordReceived : String?= ""
 
         val credentials = intent.extras
         if (credentials != null) {
-            credentials.getString("name")
-            credentials.getString("telephone")
-            credentials.getString("brand")
+            //credentials.getString("name")
+            //credentials.getString("telephone")
+            //credentials.getString("brand")
             emailReceived = credentials.getString("email")
             passwordReceived = credentials.getString("password")
         }
@@ -39,18 +38,27 @@ class LoginActivity : AppCompatActivity() {
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
 
-                if (email == emailReceived && password == passwordReceived && email.isNotEmpty() && password.isNotEmpty()) {
+                if (email.isNotEmpty() && password.isNotEmpty()) {
 
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                    startActivity(intent)
+                    if (email == emailReceived && password == passwordReceived) {
+
+                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(
+                            this@LoginActivity,
+                            "Usuario o contraseña son incorrectos, verifique e intente nuevamente",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }else {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Verifique el ingreso de los campos Email o Contraseña",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
-                else {
-                    Toast.makeText(this@LoginActivity, "Usuario o contraseña son incorrectos, verifique e intente nuevamente", Toast.LENGTH_SHORT).show()
-
-
-            }
-
-
             }
         }
     }

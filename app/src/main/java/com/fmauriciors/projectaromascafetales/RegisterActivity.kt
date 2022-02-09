@@ -18,7 +18,7 @@ class RegisterActivity : AppCompatActivity() {
             registerButton.setOnClickListener {
                 val name = nameEditText.text.toString()
                 val telephone = telephoneEditText.text.toString()
-                val brand = brandEditText.text.toString()
+                //val brand = brandEditText.text.toString()
                 val email = emailEditText.text.toString()
                 val password = passwordEditText.text.toString()
                 val repPassword = repPasswordEditText.text.toString()
@@ -27,12 +27,12 @@ class RegisterActivity : AppCompatActivity() {
                     val intent= Intent(this@RegisterActivity, LoginActivity::class.java )
                     intent.putExtra("name", name)
                     intent.putExtra("telephone", telephone)
-                    intent.putExtra("brand", brand)
+                    //intent.putExtra("brand", brand)
                     intent.putExtra("email", email)
                     intent.putExtra("password", password)
                     startActivity(intent)
                 } else
-                    Toast.makeText(applicationContext, "Las contraseñas no coinciden ", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -24,7 +24,9 @@
             android:id="@+id/name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name" />
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -44,28 +46,9 @@
             android:id="@+id/telephone_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/telephone" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/brand_text_input_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
-        android:layout_width="0dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telephone_text_input_layout"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/brand_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/brand" />
+            android:hint="@string/telephone"
+            android:inputType="numberSigned|phone"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -74,18 +57,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/brand_text_input_layout">
+        app:layout_constraintTop_toBottomOf="@+id/telephone_text_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email" />
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#757575"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -107,7 +92,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -129,7 +115,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/repeat_password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
