@@ -10,5 +10,6 @@
     <string name="brand">Nombre del producto</string>
     <string name="repeat_password">Repita la contraseña</string>
     <string name="resgister">Registrar</string>
+    <string name="sign_out">Cerrar sesión</string>
 
 </resources>
