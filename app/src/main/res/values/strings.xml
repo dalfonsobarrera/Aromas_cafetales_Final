@@ -4,12 +4,14 @@
     <string name="email">Correo electronico</string>
     <string name="password">Contraseña</string>
     <string name="sign_in">Inciar Sesión</string>
-    <string name="does_not_have_account"><u>¡No tienes Cuenta Resgistrate!</u></string>
+    <string name="text_account"><u>¡No tienes Cuenta Resgistrate!</u></string>
     <string name="name">Nombre completo</string>
     <string name="telephone">Numero de teléfono</string>
     <string name="brand">Nombre del producto</string>
     <string name="repeat_password">Repita la contraseña</string>
     <string name="resgister">Registrar</string>
-    <string name="sign_out">Cerrar sesión</string>
+    <string name="do_not_have_account">¿No tienes cuenta? ¡Registrate!</string>
+    <string name="dont_have_account">¿No tienes cuenta? ¡Regístrate!</string>
+    <string name="sing_out">Salir de la sesión</string>
 
 </resources>
