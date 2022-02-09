@@ -3,11 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2555" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_register.xml" value="0.15789473684210525" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_splash.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.121" />
+        <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_register.xml" value="0.3625" />
+        <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
       </map>
     </option>
   </component>
