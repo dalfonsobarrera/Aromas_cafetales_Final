@@ -13,5 +13,6 @@
     <string name="do_not_have_account">¿No tienes cuenta? ¡Registrate!</string>
     <string name="dont_have_account">¿No tienes cuenta? ¡Regístrate!</string>
     <string name="sing_out">Salir de la sesión</string>
+    <string name="todo">TODO</string>
 
 </resources>
