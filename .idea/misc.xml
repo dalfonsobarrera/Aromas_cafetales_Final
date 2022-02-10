@@ -3,17 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2555" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_login.xml" value="0.176" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_register.xml" value="0.15789473684210525" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_splash.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/menu/menu_overflow.xml" value="0.22894736842105262" />
-        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.121" />
+        <entry key="..\:/Users/Desarrollo/Documents/GitHub/ProjectAromasCafetales/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Desarrollo/Documents/GitHub/ProjectAromasCafetales/app/src/main/res/menu/menu.xml" value="0.49122807017543857" />
+        <entry key="..\:/Users/Desarrollo/Documents/GitHub/ProjectAromasCafetales/app/src/main/res/menu/menu_overflow.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_register.xml" value="0.3625" />
+        <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
