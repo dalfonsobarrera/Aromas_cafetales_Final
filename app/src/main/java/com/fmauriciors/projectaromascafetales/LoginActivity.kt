@@ -57,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
                             "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
                             Toast.LENGTH_SHORT
                         ).show()
-                    }
+                    }//repasar
             }
         }
     }
