@@ -8,15 +8,15 @@
 
     <ImageView
         android:id="@+id/SplashAC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="390dp"
+        android:layout_height="463dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:contentDescription="@string/image_splash_ac"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/aromascafetales" />
+        app:srcCompat="@drawable/logocircular" />
 </androidx.constraintlayout.widget.ConstraintLayout>
