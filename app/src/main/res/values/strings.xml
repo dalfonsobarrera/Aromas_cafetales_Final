@@ -8,9 +8,10 @@
     <string name="telephone">Numero de teléfono</string>
     <string name="brand">Nombre del producto</string>
     <string name="repeat_password">Repita la contraseña</string>
-    <string name="resgister">Registrar</string>
+    <string name="resgister">Registrarse</string>
     <string name="do_not_have_account"><u>¿No tienes cuenta? ¡Registrate!</u></string>
     <string name="sing_out">Salir de la sesión</string>
     <string name="todo">TODO</string>
     <string name="email_main">Correo electronico</string>
+    <string name="main">Main</string>
 </resources>
