@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding
 
@@ -22,6 +23,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
+
+        val credentials = intent.extras
+        val emailReceived = credentials?.getString("email")
+        val emailMain : TextView = findViewById(R.id.email_main)
+
+
+
+        val bundle = intent.extras
+        val emailR = bundle?.getString("email")
+        emailMain.text = emailR
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -41,6 +53,8 @@ class MainActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
+
+
 
 
 }

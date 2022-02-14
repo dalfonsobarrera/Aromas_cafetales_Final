@@ -12,4 +12,5 @@
     <string name="do_not_have_account"><u>¿No tienes cuenta? ¡Registrate!</u></string>
     <string name="sing_out">Salir de la sesión</string>
     <string name="todo">TODO</string>
+    <string name="email_main">Correo electronico</string>
 </resources>

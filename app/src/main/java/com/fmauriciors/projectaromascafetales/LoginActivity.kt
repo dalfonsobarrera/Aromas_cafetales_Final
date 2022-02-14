@@ -1,8 +1,9 @@
 package com.fmauriciors.projectaromascafetales
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Patterns
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.PatternsCompat
@@ -15,13 +16,13 @@ class LoginActivity : AppCompatActivity() {
     //private  lateinit var binding: ActivityLoginBinding
     private  lateinit var loginBinding: ActivityLoginBinding
 
+    var emailReceived : String?= ""
+    var passwordReceived : String?= ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
-
-        var emailReceived : String?= "s"
-        var passwordReceived : String?= "m"
 
         val credentials = intent.extras
 
@@ -30,12 +31,28 @@ class LoginActivity : AppCompatActivity() {
             //credentials.getString("telephone")
             //credentials.getString("brand")
             emailReceived = credentials.getString("email")        //se toman los valores de las variables en la actividad registro
-            passwordReceived = credentials.getString("password")
+            passwordReceived= credentials.getString("password")
         }
 
         loginBinding.registerTextView.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+        }
+
+        //Para guardar variable a reutilizar si se cierra el MainActivity
+
+        val emailEditT = findViewById<EditText>(R.id.email_edit_text)
+        val passwordEditT = findViewById<EditText>(R.id.password_edit_text)
+        val preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE)
+        var ema : String?= ""
+        var pass : String?= ""
+
+        if (emailReceived != "" && passwordReceived != "") {
+           // emailEditT.setText(preferencias.getString("mailR", ""))
+            // passwordEditT.setText(preferencias.getString("passwordR", ""))
+            ema=emailEditT.toString()
+            pass=passwordEditT.toString()
+
         }
 
         with (loginBinding) {
@@ -46,22 +63,31 @@ class LoginActivity : AppCompatActivity() {
                 val email = emailEditText.text.toString()      //se convierten las variables de tipo label a string
                 val password = passwordEditText.text.toString()
 
-                    if (email == emailReceived && password == passwordReceived) {  //se comparan las variables recibidas de actividad registro con las escritas en actividad login
-                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                        intent.flags =
-                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(
-                            this@LoginActivity,
-                            "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }//repasar
+                if (email == emailReceived && password == passwordReceived) {  //se comparan las variables recibidas de actividad registro con las escritas en actividad login
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    val editor = preferencias.edit()
+                    editor.putString("mailR", emailReceived)
+                    editor.putString("passwordR", passwordReceived)
+                    editor.commit()
+
+                    startActivity(intent)
+                }else if(emailReceived == ema && passwordReceived == pass){
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    intent.putExtra("email", email)
+
+                    startActivity(intent)
+                    finish()
+                }
+                else {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
         }
     }
-
     private fun validated(){
 
         val result = arrayOf(validatedEmail(), validatedPassword())
