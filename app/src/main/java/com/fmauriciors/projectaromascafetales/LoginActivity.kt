@@ -69,12 +69,10 @@ class LoginActivity : AppCompatActivity() {
                     editor.putString("mailR", emailReceived)
                     editor.putString("passwordR", passwordReceived)
                     editor.commit()
-
                     startActivity(intent)
                 }else if(emailReceived == ema && passwordReceived == pass){
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     intent.putExtra("email", email)
-
                     startActivity(intent)
                     finish()
                 }

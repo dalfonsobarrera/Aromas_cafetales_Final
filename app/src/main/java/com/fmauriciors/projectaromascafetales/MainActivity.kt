@@ -24,16 +24,19 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
+        var emailReceived : String?= ""
+
         val credentials = intent.extras
-        val emailReceived = credentials?.getString("email")
+        //helo mundo
+        if (credentials != null) {
+            //credentials.getString("name")
+            //credentials.getString("telephone")
+            //credentials.getString("brand")
+            emailReceived = credentials.getString("email")        //se toman los valores de las variables en la actividad registro
+        }
+
         val emailMain : TextView = findViewById(R.id.email_main)
-
-
-
-        val bundle = intent.extras
-        val emailR = bundle?.getString("email")
-        emailMain.text = emailR
-
+        emailMain.text = emailReceived
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
