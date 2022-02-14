@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         val emailMain : TextView = findViewById(R.id.email_main)
         emailMain.text = emailReceived
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

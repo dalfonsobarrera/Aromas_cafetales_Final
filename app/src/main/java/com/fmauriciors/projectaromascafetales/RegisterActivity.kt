@@ -4,10 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.util.PatternsCompat
+import com.fmauriciors.projectaromascafetales.databinding.ActivityLoginBinding
 import com.fmauriciors.projectaromascafetales.databinding.ActivityRegisterBinding
+import java.util.regex.Pattern
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var registerBinding: ActivityRegisterBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +35,11 @@ class RegisterActivity : AppCompatActivity() {
                     intent.putExtra("email", email)
                     intent.putExtra("password", password)
                     startActivity(intent)
+                    finish()
                 } else
                     Toast.makeText(applicationContext, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
 }

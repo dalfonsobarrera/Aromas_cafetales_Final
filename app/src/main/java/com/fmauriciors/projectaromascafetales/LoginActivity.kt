@@ -63,29 +63,43 @@ class LoginActivity : AppCompatActivity() {
                 val email = emailEditText.text.toString()      //se convierten las variables de tipo label a string
                 val password = passwordEditText.text.toString()
 
-                if (email == emailReceived && password == passwordReceived) {  //se comparan las variables recibidas de actividad registro con las escritas en actividad login
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                    val editor = preferencias.edit()
-                    editor.putString("mailR", emailReceived)
-                    editor.putString("passwordR", passwordReceived)
-                    editor.commit()
-                    startActivity(intent)
-                }else if(emailReceived == ema && passwordReceived == pass){
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                    intent.putExtra("email", email)
-                    startActivity(intent)
-                    finish()
-                }
-                else {
+                if (email!= "" && password != "") {
+
+                    if (email == emailReceived && password == passwordReceived) {  //se comparan las variables recibidas de actividad registro con las escritas en actividad login
+                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                        intent.putExtra("email", email)
+                        val editor = preferencias.edit()
+                        editor.putString("mailR", emailReceived)
+                        editor.putString("passwordR", passwordReceived)
+                        editor.commit()
+                        startActivity(intent)
+                        finish()
+                }   else if(emailReceived == ema && passwordReceived == pass){
+                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                        intent.putExtra("email", email)
+                        startActivity(intent)
+                        finish()
+                        }
+                        else {
+                            Toast.makeText(
+                                this@LoginActivity,
+                                "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+                    }
+                     else {
                     Toast.makeText(
                         this@LoginActivity,
                         "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
                         Toast.LENGTH_SHORT
                     ).show()
+                    }
                 }
             }
         }
-    }
+
     private fun validated(){
 
         val result = arrayOf(validatedEmail(), validatedPassword())
@@ -130,6 +144,5 @@ class LoginActivity : AppCompatActivity() {
             true
         }
     }
-
-
 }
+
