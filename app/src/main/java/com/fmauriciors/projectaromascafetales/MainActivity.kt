@@ -1,13 +1,12 @@
 package com.fmauriciors.projectaromascafetales
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         var emailReceived : String?= ""
 
         val credentials = intent.extras
-        //helo mundo
+        //hello world
         if (credentials != null) {
             //credentials.getString("name")
             //credentials.getString("telephone")
