@@ -2,6 +2,7 @@ package com.fmauriciors.projectaromascafetales
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
@@ -31,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
             //credentials.getString("telephone")
             //credentials.getString("brand")
             emailReceived = credentials.getString("email")        //se toman los valores de las variables en la actividad registro
-            passwordReceived= credentials.getString("password")
+            passwordReceived = credentials.getString("password")
         }
 
         loginBinding.registerTextView.setOnClickListener {
@@ -40,22 +41,11 @@ class LoginActivity : AppCompatActivity() {
         }
 
         //Para guardar variable a reutilizar si se cierra el MainActivity
+        val preferencias = getSharedPreferences("datos", MODE_PRIVATE)
+        val emailRef = preferencias.getString("mailR", "").toString()
+        val passwordRef = preferencias.getString("passwordR", "").toString()
 
-        val emailEditT = findViewById<EditText>(R.id.email_edit_text)
-        val passwordEditT = findViewById<EditText>(R.id.password_edit_text)
-        val preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE)
-        var ema : String?= ""
-        var pass : String?= ""
-
-        if (emailReceived != "" && passwordReceived != "") {
-           // emailEditT.setText(preferencias.getString("mailR", ""))
-            // passwordEditT.setText(preferencias.getString("passwordR", ""))
-            ema=emailEditT.toString()
-            pass=passwordEditT.toString()
-
-        }
-
-        with (loginBinding) {
+        with(loginBinding) {
             signInButton.setOnClickListener {
 
                 validated() //se llama la función de validacion, que se encarga de verificar el estado de los campos Email y contraseña.
@@ -63,42 +53,39 @@ class LoginActivity : AppCompatActivity() {
                 val email = emailEditText.text.toString()      //se convierten las variables de tipo label a string
                 val password = passwordEditText.text.toString()
 
-                if (email!= "" && password != "") {
+                if (email != "" && password != "") {
 
                     if (email == emailReceived && password == passwordReceived) {  //se comparan las variables recibidas de actividad registro con las escritas en actividad login
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                        intent.putExtra("email", email)
                         val editor = preferencias.edit()
-                        editor.putString("mailR", emailReceived)
-                        editor.putString("passwordR", passwordReceived)
+                        intent.putExtra("emailR", email)
+                        intent.putExtra("passwordR", password)
                         editor.commit()
+                        intent.putExtra("email", email)
                         startActivity(intent)
                         finish()
-                }   else if(emailReceived == ema && passwordReceived == pass){
+                    }else if (email == emailRef && password == passwordRef){
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         intent.putExtra("email", email)
                         startActivity(intent)
                         finish()
-                        }
-                        else {
-                            Toast.makeText(
-                                this@LoginActivity,
-                                "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-
+                    }else {
+                        Toast.makeText(
+                            this@LoginActivity,
+                            "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
-                     else {
+                }else {
                     Toast.makeText(
                         this@LoginActivity,
-                        "Usuario o contraseña son incorrectos, verifique e intente nuevamente. Recuerde registrase",
+                        "Ingrese Usuario o contraseña campos vacíos. Recuerde registrarse",
                         Toast.LENGTH_SHORT
                     ).show()
-                    }
                 }
             }
         }
+    }
 
     private fun validated(){
 

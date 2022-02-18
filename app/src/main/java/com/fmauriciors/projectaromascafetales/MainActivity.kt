@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
 
         var emailReceived : String?= ""
 
-        val credentials = intent.extras
+        val credenciales = intent.extras
         //hello world
-        if (credentials != null) {
-            //credentials.getString("name")
-            //credentials.getString("telephone")
-            //credentials.getString("brand")
-            emailReceived = credentials.getString("email")        //se toman los valores de las variables en la actividad registro
+        if (credenciales != null) {
+            //credenciales.getString("name")
+            //credenciales.getString("telephone")
+            //credenciales.getString("brand")
+            emailReceived = credenciales.getString("email")        //se toman los valores de las variables en la actividad registro
         }
 
         val emailMain : TextView = findViewById(R.id.email_main)
