@@ -1,11 +1,9 @@
-package com.fmauriciors.projectaromascafetales
+package com.fmauriciors.projectaromascafetales.ui.register
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.util.PatternsCompat
-import com.fmauriciors.projectaromascafetales.databinding.ActivityLoginBinding
 import com.fmauriciors.projectaromascafetales.databinding.ActivityRegisterBinding
 import java.util.regex.Pattern
 
@@ -98,15 +96,4 @@ class RegisterActivity : AppCompatActivity() {
             true
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

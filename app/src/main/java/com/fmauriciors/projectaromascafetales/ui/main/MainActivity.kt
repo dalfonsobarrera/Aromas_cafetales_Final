@@ -1,4 +1,4 @@
-package com.fmauriciors.projectaromascafetales
+package com.fmauriciors.projectaromascafetales.ui.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,9 @@ import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding
+import com.fmauriciors.projectaromascafetales.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
+        /*
         var emailReceived : String?= ""
 
         val credenciales = intent.extras
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         val emailMain : TextView = findViewById(R.id.email_main)
         emailMain.text = emailReceived
-
+        */
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -53,11 +56,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToLoginActivity() {
         val intent = Intent(this, LoginActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
-
-
-
 
 }

@@ -1,13 +1,11 @@
-package com.fmauriciors.projectaromascafetales
+package com.fmauriciors.projectaromascafetales.ui.login
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.PatternsCompat
+import com.fmauriciors.projectaromascafetales.ui.register.RegisterActivity
 import com.fmauriciors.projectaromascafetales.databinding.ActivityLoginBinding
 import java.util.regex.Pattern
 
@@ -58,8 +56,8 @@ class LoginActivity : AppCompatActivity() {
                     if (email == emailReceived && password == passwordReceived) {  //se comparan las variables recibidas de actividad registro con las escritas en actividad login
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         val editor = preferencias.edit()
-                        intent.putExtra("emailR", email)
-                        intent.putExtra("passwordR", password)
+                        editor.putString("emailR", email)
+                        editor.putString("passwordR", password)
                         editor.commit()
                         intent.putExtra("email", email)
                         startActivity(intent)
