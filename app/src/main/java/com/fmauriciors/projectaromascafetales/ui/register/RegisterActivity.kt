@@ -28,7 +28,7 @@ class RegisterActivity : AppCompatActivity() {
 
                 if (email != "" && password != "") {
                     if (password == repPassword){
-                        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                        //val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                         intent.putExtra("name", name)
                         intent.putExtra("telephone", telephone)
                         intent.putExtra("email", email)

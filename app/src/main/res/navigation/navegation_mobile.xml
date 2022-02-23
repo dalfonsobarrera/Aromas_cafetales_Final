@@ -3,19 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegation_mobile"
-    app:startDestination="@id/loginUserFragment3">
-
+    app:startDestination="@id/loginUserFragment4">
     <fragment
-        android:id="@+id/registerUserFragment"
-        android:name="com.fmauriciors.projectaromascafetales.ui.registeruser.RegisterUserFragment"
-        android:label="RegisterUserFragment" />
+        android:id="@+id/loginUserFragment4"
+        android:name="com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment"
+        android:label="LoginUserFragment" />
     <fragment
-        android:id="@+id/splashArFragment"
+        android:id="@+id/splashArFragment2"
         android:name="com.fmauriciors.projectaromascafetales.ui.splashar.SplashArFragment"
         android:label="fragment_splash_ar"
         tools:layout="@layout/fragment_splash_ar" />
     <fragment
-        android:id="@+id/loginUserFragment3"
-        android:name="com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment"
-        android:label="LoginUserFragment" />
+        android:id="@+id/registerUserFragment2"
+        android:name="com.fmauriciors.projectaromascafetales.ui.registeruser.RegisterUserFragment"
+        android:label="RegisterUserFragment" />
 </navigation>
