@@ -56,8 +56,8 @@ class LoginActivity : AppCompatActivity() {
                     if (email == emailReceived && password == passwordReceived) {  //se comparan las variables recibidas de actividad registro con las escritas en actividad login
                         //val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         val editor = preferencias.edit()
-                        intent.putExtra("emailR", email)
-                        intent.putExtra("passwordR", password)
+                        editor.putString("emailR", email)
+                        editor.putString("passwordR", password)
                         editor.commit()
                         intent.putExtra("email", email)
                         startActivity(intent)
