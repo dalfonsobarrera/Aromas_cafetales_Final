@@ -1,11 +1,9 @@
-package com.fmauriciors.projectaromascafetales
+package com.fmauriciors.projectaromascafetales.ui.register
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.util.PatternsCompat
-import com.fmauriciors.projectaromascafetales.databinding.ActivityLoginBinding
 import com.fmauriciors.projectaromascafetales.databinding.ActivityRegisterBinding
 import java.util.regex.Pattern
 
@@ -30,7 +28,7 @@ class RegisterActivity : AppCompatActivity() {
 
                 if (email != "" && password != "") {
                     if (password == repPassword){
-                        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                       //val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                         intent.putExtra("name", name)
                         intent.putExtra("telephone", telephone)
                         intent.putExtra("email", email)
@@ -98,15 +96,4 @@ class RegisterActivity : AppCompatActivity() {
             true
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

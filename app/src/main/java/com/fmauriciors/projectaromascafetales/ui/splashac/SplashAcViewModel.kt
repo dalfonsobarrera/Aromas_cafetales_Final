@@ -1,0 +1,26 @@
+package com.fmauriciors.projectaromascafetales.ui.splashac
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
+
+const val DEFAULT_DELAY = 2000L
+
+class SplashAcViewModel : ViewModel() {
+
+    private val timer = MutableLiveData<Boolean>()
+    val onTimer: LiveData<Boolean> = timer
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            delay(DEFAULT_DELAY)
+            timer.postValue(true)
+        }
+    }
+}

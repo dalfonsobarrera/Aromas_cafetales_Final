@@ -1,9 +1,10 @@
-package com.fmauriciors.projectaromascafetales
+package com.fmauriciors.projectaromascafetales.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.fmauriciors.projectaromascafetales.databinding.ActivitySplashBinding
+import com.fmauriciors.projectaromascafetales.ui.login.LoginActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 
