@@ -21,6 +21,7 @@ class RegisterUserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_register_user, container, false)
+        //hola comentario
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
