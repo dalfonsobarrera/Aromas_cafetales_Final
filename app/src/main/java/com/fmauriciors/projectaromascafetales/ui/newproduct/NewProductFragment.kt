@@ -6,33 +6,30 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.R
+import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
+import com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragmentDirections
 
 class NewProductFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = NewProductFragment()
-    }
-
+    private lateinit var newProductBinding: FragmentNewProductBinding
     private lateinit var viewModel: NewProductViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_new_product, container, false)
-    }
+    ): View {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+        newProductBinding = FragmentNewProductBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(NewProductViewModel::class.java)
-        // TODO: Use the ViewModel
-        //
-
-
-
-        //
-
+        return newProductBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        newProductBinding.saveButton.setOnClickListener {
+            findNavController().navigate(NewProductFragmentDirections.actionNewProductFragmentToDetailProductFragment())
+        }
+    }
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_mobile"
-    app:startDestination="@id/splashAcFragment">
+    app:startDestination="@id/listProductsFragment">
     <fragment
         android:id="@+id/loginUserFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment"
@@ -31,8 +31,8 @@
         android:label="fragment_new_product"
         tools:layout="@layout/fragment_new_product" >
         <action
-            android:id="@+id/action_newProductFragment_to_listProductsFragment"
-            app:destination="@id/listProductsFragment" />
+            android:id="@+id/action_newProductFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashAcFragment"
@@ -51,5 +51,14 @@
         <action
             android:id="@+id/action_registerUserFragment_to_loginUserFragment"
             app:destination="@id/loginUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.detailproduct.DetailProductFragment"
+        android:label="fragment_detail_product"
+        tools:layout="@layout/fragment_detail_product" >
+        <action
+            android:id="@+id/action_detailProductFragment_to_listProductsFragment"
+            app:destination="@id/listProductsFragment" />
     </fragment>
 </navigation>

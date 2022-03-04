@@ -14,4 +14,9 @@
     <string name="todo">TODO</string>
     <string name="email_main">Correo electronico</string>
     <string name="main">Main</string>
+    <string name="save_Button">Guardar</string>
+    <string name="name_brand">Nombre de la marca</string>
+    <string name="Location">Ubicación de la finca</string>
+    <string name="resume_plantation">Breve descripcion</string>
+    <string name="save">Guardar</string>
 </resources>
