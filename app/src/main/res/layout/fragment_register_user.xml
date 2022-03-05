@@ -49,7 +49,7 @@ android:background="@drawable/texturacaferegado">
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name_edit_text"
+            android:id="@+id/name_product_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
@@ -58,7 +58,7 @@ android:background="@drawable/texturacaferegado">
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/telephone_text_input_layout"
+        android:id="@+id/cost_product_text_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@ android:background="@drawable/texturacaferegado">
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/telephone_edit_text"
+            android:id="@+id/cost_product_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/telephone"
@@ -89,7 +89,7 @@ android:background="@drawable/texturacaferegado">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telephone_text_input_layout">
+        app:layout_constraintTop_toBottomOf="@+id/cost_product_text_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
@@ -125,7 +125,7 @@ android:background="@drawable/texturacaferegado">
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/resume_text_input_layout"
+        android:id="@+id/resume_product_text_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -139,7 +139,7 @@ android:background="@drawable/texturacaferegado">
         app:layout_constraintTop_toBottomOf="@+id/location_text_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/resume_edit_text"
+            android:id="@+id/resume_product_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/repeat_password"
@@ -148,7 +148,7 @@ android:background="@drawable/texturacaferegado">
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/save_button"
+        android:id="@+id/save_product_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -157,7 +157,7 @@ android:background="@drawable/texturacaferegado">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resume_text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/resume_product_text_input_layout"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints,TextContrastCheck" />
 

@@ -5,14 +5,10 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.inflate
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.DrawableCompat.inflate
 import androidx.navigation.fragment.navArgs
-import com.fmauriciors.projectaromascafetales.R
-import com.fmauriciors.projectaromascafetales.databinding.ActivityLoginBinding.inflate
-import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding.inflate
-import com.fmauriciors.projectaromascafetales.databinding.ActivityRegisterBinding.inflate
+
+
 import com.fmauriciors.projectaromascafetales.databinding.FragmentDetailProductBinding
 
 class DetailProductFragment : Fragment() {
@@ -20,6 +16,7 @@ class DetailProductFragment : Fragment() {
 
     private lateinit var detailProductBinding: FragmentDetailProductBinding
     private lateinit var detailViewModel: DetailProductViewModel
+
 
 
     override fun onCreateView(
@@ -33,6 +30,7 @@ class DetailProductFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 
 }

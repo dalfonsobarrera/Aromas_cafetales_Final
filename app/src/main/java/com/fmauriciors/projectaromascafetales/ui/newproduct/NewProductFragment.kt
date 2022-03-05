@@ -6,16 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.fmauriciors.projectaromascafetales.R
+import android.widget.Toast
+
 import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
-import com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragmentDirections
-import com.fmauriciors.projectaromascafetales.ui.local.Product
+
 
 class NewProductFragment : Fragment() {
 
     private lateinit var newProductBinding: FragmentNewProductBinding
-    private lateinit var viewModel: NewProductViewModel
+    private lateinit var newProductViewModel: NewProductViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,22 +22,57 @@ class NewProductFragment : Fragment() {
     ): View {
 
         newProductBinding = FragmentNewProductBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(this).get(NewProductViewModel::class.java)
+        newProductViewModel = ViewModelProvider(this).get(NewProductViewModel::class.java)
         return newProductBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        newProductBinding.saveButton.setOnClickListener {
+        /*newProductBinding.saveButton.setOnClickListener {
             findNavController().navigate(NewProductFragmentDirections.actionNewProductFragmentToDetailProductFragment())
+        }*/
+        newProductViewModel.msgDone.observe(viewLifecycleOwner) { result ->
+            onMsgDoneSubscribe(result)
+
         }
 
-        val product = Product(
-            product_name = "name",
-            cost = 0,
-            name_brand = "marca",
-            resume_plantation =""
+       newProductViewModel.dateValidate.observe(viewLifecycleOwner) { result ->
+            onDataValidatedSubscribe(result)
 
-            )
+           with(newProductBinding){
+
+
+               saveProductButton.setOnClickListener {
+
+                   newProductViewModel.validateFields(
+                       nameProductEditText.text.toString(),
+                       costProductEditText.text.toString(),
+                       resumeProductEditText.text.toString()
+                   )
+               }
+           }
+
+        }
+
+    }
+    private fun onDataValidatedSubscribe(result: Boolean) {
+        with(newProductBinding) {
+            val nameProduct: String = nameProductEditText.text.toString()
+            val cost = costProductEditText.text.toString()
+            val resumePlantation = resumeProductEditText.text.toString()
+
+            newProductViewModel.saveProduct(nameProduct, cost, resumePlantation)
+
+        }
+
+    }
+
+    private fun onMsgDoneSubscribe(msg: String?) {
+        Toast.makeText(
+            requireContext(),
+            msg,
+            Toast.LENGTH_SHORT
+        ).show()
+
     }
 }

@@ -10,35 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".ui.bottom.BottomActivity"
             android:exported="true"
-            android:label="@string/title_activity_bottom" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:label="@string/title_activity_bottom">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.register.RegisterActivity"
-            android:exported="false"
-            android:label="@string/resgister"
-            tools:ignore="MissingClass" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme.Splash" />
-        <activity
-            android:name=".ui.splash.SplashActivity"
-            android:exported="true"
-            android:label="Aromas Cafetales"
-            android:theme="@style/AppTheme.Splash" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true"
-            android:label="@string/main">
-        </activity>
+            android:label="@string/main"></activity>
     </application>
 
 </manifest>
