@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding
-import com.fmauriciors.projectaromascafetales.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 

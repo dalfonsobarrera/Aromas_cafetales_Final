@@ -24,23 +24,24 @@ android:background="@drawable/texturacaferegado">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="263dp"
-        android:layout_height="214dp"
+        android:layout_width="122dp"
+        android:layout_height="90dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name_text_input_layout"
+        android:id="@+id/name_text_register_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -49,7 +50,7 @@ android:background="@drawable/texturacaferegado">
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name_edit_text"
+            android:id="@+id/name_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
@@ -58,20 +59,21 @@ android:background="@drawable/texturacaferegado">
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/telephone_text_input_layout"
+        android:id="@+id/telephone_text_register_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/genere_register_radio_group"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/telephone_edit_text"
+            android:id="@+id/telephone_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/telephone"
@@ -80,19 +82,20 @@ android:background="@drawable/texturacaferegado">
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_text_input_layout"
+        android:id="@+id/email_text_register_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telephone_text_input_layout">
+        app:layout_constraintTop_toBottomOf="@+id/telephone_text_register_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_edit_text"
+            android:id="@+id/email_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -102,7 +105,7 @@ android:background="@drawable/texturacaferegado">
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_text_input_layout"
+        android:id="@+id/password_text_register_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -113,10 +116,10 @@ android:background="@drawable/texturacaferegado">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_text_input_layout">
+        app:layout_constraintTop_toBottomOf="@+id/email_text_register_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit_text"
+            android:id="@+id/password_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -125,7 +128,7 @@ android:background="@drawable/texturacaferegado">
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/rep_password_text_input_layout"
+        android:id="@+id/rep_password_text_register_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -136,10 +139,10 @@ android:background="@drawable/texturacaferegado">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout">
+        app:layout_constraintTop_toBottomOf="@+id/password_text_register_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/rep_password_edit_text"
+            android:id="@+id/rep_password_register_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/repeat_password"
@@ -157,9 +160,39 @@ android:background="@drawable/texturacaferegado">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rep_password_text_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/rep_password_text_register_input_layout"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints,TextContrastCheck" />
+
+    <RadioGroup
+        android:id="@+id/genere_register_radio_group"
+        android:layout_width="368dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_register_input_layout"
+        app:layout_constraintVertical_bias="0.097">
+
+        <RadioButton
+            android:id="@+id/gener_male_register_radio_buttom"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:text="@string/male"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/genere_female_register_radio_button"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

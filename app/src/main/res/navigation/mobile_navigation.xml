@@ -29,11 +29,7 @@
         android:id="@+id/newProductFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.newproduct.NewProductFragment"
         android:label="fragment_new_product"
-        tools:layout="@layout/fragment_new_product" >
-        <action
-            android:id="@+id/action_newProductFragment_to_listProductsFragment"
-            app:destination="@id/listProductsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_new_product" />
     <fragment
         android:id="@+id/splashAcFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.splashac.SplashAcFragment"
@@ -49,7 +45,16 @@
         android:label="fragment_register_user"
         tools:layout="@layout/fragment_register_user" >
         <action
-            android:id="@+id/action_registerUserFragment_to_loginUserFragment"
+            android:id="@+id/action_registerUserFragment_to_detailRegisterFragment"
+            app:destination="@id/detailRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRegisterFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.detailregister.DetailRegisterFragment"
+        android:label="fragment_detail_register"
+        tools:layout="@layout/fragment_detail_register" >
+        <action
+            android:id="@+id/action_detailRegisterFragment_to_loginUserFragment"
             app:destination="@id/loginUserFragment" />
     </fragment>
 </navigation>

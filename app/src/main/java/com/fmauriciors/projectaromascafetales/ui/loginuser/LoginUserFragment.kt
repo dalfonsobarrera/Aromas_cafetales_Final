@@ -7,13 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentListProductsBinding
 import com.fmauriciors.projectaromascafetales.databinding.FragmentLoginUserBinding
 import com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragmentDirections
 import com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsViewModel
-import com.fmauriciors.projectaromascafetales.ui.register.RegisterActivity
 
 class LoginUserFragment : Fragment() {
 

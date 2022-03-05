@@ -14,4 +14,8 @@
     <string name="todo">TODO</string>
     <string name="email_main">Correo electronico</string>
     <string name="main">Main</string>
+    <string name="female">Mujer</string>
+    <string name="male">Masculino</string>
+    <string name="email_login">Correo electrónico</string>
+    <string name="email_login_user">Correo electronico</string>
 </resources>

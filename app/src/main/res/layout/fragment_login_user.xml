@@ -13,16 +13,6 @@
         tools:context=".ui.loginuser.LoginUserFragment">
 
         <ImageView
-            android:id="@+id/image_view_background"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/todo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
             android:id="@+id/logo_image_view"
             android:layout_width="317dp"
             android:layout_height="237dp"
@@ -34,67 +24,26 @@
             app:srcCompat="@drawable/logocircular"
             tools:ignore="ImageContrastCheck" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_text_input_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="370dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="8dp"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo_image_view">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"
-                tools:ignore="TextContrastCheck" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password_text_input_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="370dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            app:endIconMode="password_toggle"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_text_input_layout">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                tools:ignore="TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/image_view_background"
+            android:layout_width="405dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/todo"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="349dp" />
 
         <Button
             android:id="@+id/sign_in_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="36dp"
             android:layout_marginEnd="8dp"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteY="501dp" />
 
         <TextView
             android:id="@+id/register_text_view"
@@ -108,6 +57,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
             tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_text_login_input_layout"
+            android:layout_width="380dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image_view">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_login_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/email_login_user"
+                tools:ignore="TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
