@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/listProductsFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragment"
-        android:label="fragment_list_products"
+        android:label="@string/title_list"
         tools:layout="@layout/fragment_list_products" >
         <action
             android:id="@+id/action_listProductsFragment_to_newProductFragment"
@@ -61,4 +61,14 @@
             android:id="@+id/action_detailProductFragment_to_listProductsFragment"
             app:destination="@id/listProductsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.favorite.FavoriteFragment"
+        android:label="@string/title_favoritos"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/shopingFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.shoping.ShopingFragment"
+        android:label="fragment_shoping"
+        tools:layout="@string/title_carrito" />
 </navigation>

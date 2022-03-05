@@ -5,28 +5,42 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.inflate
 import android.view.ViewGroup
+import androidx.core.graphics.drawable.DrawableCompat.inflate
+import androidx.navigation.fragment.navArgs
 import com.fmauriciors.projectaromascafetales.R
+import com.fmauriciors.projectaromascafetales.databinding.ActivityLoginBinding.inflate
+import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding.inflate
+import com.fmauriciors.projectaromascafetales.databinding.ActivityRegisterBinding.inflate
+import com.fmauriciors.projectaromascafetales.databinding.FragmentDetailProductBinding
 
 class DetailProductFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = DetailProductFragment()
-    }
 
-    private lateinit var viewModel: DetailProductViewModel
+    private lateinit var detailProductBinding: FragmentDetailProductBinding
+    private lateinit var detailViewModel: DetailProductViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_detail_product, container, false)
+    ): View {
+        detailProductBinding = FragmentDetailProductBinding.inflate(inflater, container, false)
+        detailViewModel = ViewModelProvider(this)[detailViewModel::class.java]
+        return detailProductBinding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DetailProductViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
 }
+
+
+
+
+
+
+
+

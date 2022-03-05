@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
 import com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragmentDirections
+import com.fmauriciors.projectaromascafetales.ui.local.Product
 
 class NewProductFragment : Fragment() {
 
@@ -31,5 +32,13 @@ class NewProductFragment : Fragment() {
         newProductBinding.saveButton.setOnClickListener {
             findNavController().navigate(NewProductFragmentDirections.actionNewProductFragmentToDetailProductFragment())
         }
+
+        val product = Product(
+            product_name = "name",
+            cost = 0,
+            name_brand = "marca",
+            resume_plantation =""
+
+            )
     }
 }
