@@ -1,4 +1,11 @@
 <resources>
+    <string name="name_register_user">Nombre completo</string>
+    <string name="phone_register_user">Número de teléfono</string>
+    <string name="email_register_user">Correo eléctronico</string>
+    <string name="password_register_user">Contraseña</string>
+    <string name="repassword_register_user">Repita la contraseña</string>
+
+
     <string name="app_name">Aromas Cafetales</string>
     <string name="image_splash_ac">Splash</string>
     <string name="email">Correo electronico</string>
@@ -32,5 +39,7 @@
     <string name="cancel">Cancelar</string>
     <string name="accept">Aceptar</string>
     <string name="update">Actualizar</string>
+
+
 
 </resources>
