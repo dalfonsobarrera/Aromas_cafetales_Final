@@ -3,6 +3,7 @@ package com.fmauriciors.projectaromascafetales.ui.listproducts
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.CardViewItemProductBinding
@@ -16,8 +17,8 @@ class ProductsAdapter (
 
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-            val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.card_view_item_product, parent, false)
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.card_view_item_product, parent, false)
             return ProductViewHolder(view)
         }
 
@@ -34,17 +35,15 @@ class ProductsAdapter (
             notifyDataSetChanged()
         }
 
-
-        class ProductViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
+        class ProductViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
             private val binding = CardViewItemProductBinding.bind(itemView)
-            fun bind (product: Product){
+            fun bind(product: Product) {
                 with(binding){
                     nameCardProductTextView.text = product.productName
-                    nameCardBrandTextView.text = product.cost
+                    nameCardCostoTextView.text = product.cost
+                    nameCardResumeTextView.text = product.resumePlantation
 
                 }
-
             }
         }
-
     }

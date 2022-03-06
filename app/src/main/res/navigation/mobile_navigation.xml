@@ -9,12 +9,13 @@
         android:name="com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment"
         android:label="LoginUserFragment"
         tools:layout="@layout/fragment_login_user" >
-        <action
-            android:id="@+id/action_loginUserFragment_to_registerUserFragment"
-            app:destination="@id/registerUserFragment" />
+
         <action
             android:id="@+id/action_loginUserFragment_to_listProductsFragment"
             app:destination="@id/listProductsFragment" />
+        <action
+            android:id="@+id/action_loginUserFragment_to_registerUserFragment"
+            app:destination="@id/registerUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/listProductsFragment"

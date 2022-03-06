@@ -35,8 +35,7 @@ android:layout_height="wrap_content">
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_product_edit_text"
@@ -44,7 +43,7 @@ android:layout_height="wrap_content">
                 android:layout_height="wrap_content"
                 android:hint="@string/product_name"
                 android:inputType="textPersonName"
-                tools:ignore="TextContrastCheck" />
+                android:textColorHint="#757575" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -58,15 +57,14 @@ android:layout_height="wrap_content">
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_text_input_layout"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/name_text_input_layout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cost_product_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/cost"
-                android:inputType="numberSigned|phone"
+                android:inputType="text"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,15 +79,14 @@ android:layout_height="wrap_content">
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cost_product_text_input_layout"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/cost_product_text_input_layout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/resume_product_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/resume_plantation"
-                tools:ignore="TextContrastCheck,TextContrastCheck" />
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,8 +100,7 @@ android:layout_height="wrap_content">
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resume_product_text_input_layout"
-            tools:ignore="MissingConstraints,TextContrastCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/resume_product_text_input_layout" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

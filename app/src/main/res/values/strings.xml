@@ -23,5 +23,6 @@
     <string name="example_product">Example Product</string>
     <string name="example_brand">Example Brand</string>
     <string name="save_product">Guardar</string>
+    <string name="name_resume">Resumen finca</string>
 
 </resources>

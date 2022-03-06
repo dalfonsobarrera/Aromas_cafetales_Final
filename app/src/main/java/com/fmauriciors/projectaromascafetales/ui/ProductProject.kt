@@ -19,6 +19,7 @@ class ProductProject: Application() {
             this,
             ProductDatabase::class.java,
             "Product_db"
-        ).build()
+        ).allowMainThreadQueries()
+            .build()
     }
 }

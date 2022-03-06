@@ -7,10 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
-
 import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
-import com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragmentDirections
+
 
 
 class NewProductFragment : Fragment() {
@@ -31,13 +29,13 @@ class NewProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        newProductViewModel.msgDone.observe(viewLifecycleOwner) { result ->
+        newProductViewModel.msgDone.observe(viewLifecycleOwner, { result ->
             onMsgDoneSubscribe(result)
-        }
-        newProductViewModel.dataValidated.observe(viewLifecycleOwner) { result ->
+        })
+        newProductViewModel.dataValidated.observe(viewLifecycleOwner, { result ->
             onDataValidatedSubscribe(result)
 
-            with(newProductBinding) {
+            with(newProductBinding) { 
 
 
                 saveProductButton.setOnClickListener {
@@ -47,17 +45,20 @@ class NewProductFragment : Fragment() {
                         costProductEditText.text.toString(),
                         resumeProductEditText.text.toString()
                     )
+
+
+
                 }
             }
 
-        }
+        })
 
     }
 
 
-    private fun onDataValidatedSubscribe(result: Boolean) {
+    private fun onDataValidatedSubscribe(result: Boolean?) {
         with(newProductBinding) {
-            val nameProduct: String = nameProductEditText.text.toString()
+            val nameProduct = nameProductEditText.text.toString()
             val cost = costProductEditText.text.toString()
             val resumePlantation = resumeProductEditText.text.toString()
 

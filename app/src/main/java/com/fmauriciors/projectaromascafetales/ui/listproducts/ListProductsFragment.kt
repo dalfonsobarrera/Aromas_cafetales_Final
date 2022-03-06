@@ -31,13 +31,13 @@ class ListProductsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        productsList.add(Product(
+            1,"cafe","50","caferico"
+        ))
 
 
-        listProductsViewModel.loadProductDone.observe(viewLifecycleOwner) { result ->
-            onLoadProductsDoneSubscribe(result)
-        }
 
-        listProductsViewModel.loadProducts()
+       listProductsViewModel.loadProducts()
 
         productsAdapter = ProductsAdapter(productsList)
 

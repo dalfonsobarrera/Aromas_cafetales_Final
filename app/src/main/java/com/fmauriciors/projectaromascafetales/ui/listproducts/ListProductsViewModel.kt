@@ -20,5 +20,4 @@ class ListProductsViewModel : ViewModel() {
             loadProducts.postValue( productRepository.loadProducts())
         }
     }
-
 }
