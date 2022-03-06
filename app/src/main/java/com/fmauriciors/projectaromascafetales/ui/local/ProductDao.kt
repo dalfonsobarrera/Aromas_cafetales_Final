@@ -12,11 +12,11 @@ interface ProductDao {
     @Insert
      suspend fun saveProduct ( product: Product)
 
-    /*@Query("SELECT * FROM table_books WHERE name LIKE :nameBook")
-    suspend fun searchBook (nameBook:String): Book
+    @Query("SELECT * FROM table_products WHERE productName LIKE :nameProduct")
+    suspend fun searchProduct (nameProduct:String): Product
 
     @Delete
-    suspend fun deleteBook(book: Book)*/
+    suspend fun deleteProduct(product: Product)
 
     @Query ("SELECT * FROM table_products")
      suspend fun loadProducts(): MutableList<Product>

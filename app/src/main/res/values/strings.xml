@@ -24,5 +24,13 @@
     <string name="example_brand">Example Brand</string>
     <string name="save_product">Guardar</string>
     <string name="name_resume">Resumen finca</string>
+    <string name="search_product">Busqueda del producto</string>
+    <string name="search_button">Buscar</string>
+    <string name="search">Buscar</string>
+    <string name="warning_title">Advertencia</string>
+    <string name="delete_book_msg">¿Desea eliminar el producto %s de la marca %s?</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+    <string name="update">Actualizar</string>
 
 </resources>

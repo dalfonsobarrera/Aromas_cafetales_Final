@@ -24,17 +24,17 @@ class ProductRepository {
         val productDao : ProductDao = ProductProject.database.ProductDao()
         productDao.saveProduct(product)
     }
-/*
-    suspend fun searchBook(nameBook: String): Book {
-        val bookDao: BookDao = BookProject.database.BookDao()
-        val  book= bookDao.searchBook(nameBook)
-        return book
+
+    suspend fun searchProduct(nameProduct: String): Product {
+        val productDao: ProductDao = ProductProject.database.ProductDao()
+        val  product = productDao.searchProduct(nameProduct)
+        return product
     }
 
-    suspend fun deleteBook(book: Book) {
-        val bookDao: BookDao = BookProject.database.BookDao()
-        bookDao.deleteBook(book)
-    }*/
+    suspend fun deleteProduct(product: Product) {
+        val productDao: ProductDao = ProductProject.database.ProductDao()
+        productDao.deleteProduct(product)
+    }
 
     suspend fun loadProducts(): ArrayList<Product>{
         val productDao: ProductDao = ProductProject.database.ProductDao()

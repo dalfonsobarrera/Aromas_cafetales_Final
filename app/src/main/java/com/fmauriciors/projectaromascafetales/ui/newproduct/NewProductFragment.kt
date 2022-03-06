@@ -7,8 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
-
+import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragmentDirections
 
 
 class NewProductFragment : Fragment() {
@@ -34,24 +35,19 @@ class NewProductFragment : Fragment() {
         })
         newProductViewModel.dataValidated.observe(viewLifecycleOwner, { result ->
             onDataValidatedSubscribe(result)
-
-            with(newProductBinding) { 
-
-
-                saveProductButton.setOnClickListener {
-
-                    newProductViewModel.validateFields(
-                        nameProductEditText.text.toString(),
-                        costProductEditText.text.toString(),
-                        resumeProductEditText.text.toString()
-                    )
-
-
-
-                }
-            }
-
         })
+
+        with(newProductBinding) {
+
+            saveProductButton.setOnClickListener {
+
+                newProductViewModel.validateFields(
+                    nameProductEditText.text.toString(),
+                    costProductEditText.text.toString(),
+                    resumeProductEditText.text.toString()
+                )
+            }
+        }
 
     }
 
@@ -63,7 +59,6 @@ class NewProductFragment : Fragment() {
             val resumePlantation = resumeProductEditText.text.toString()
 
             newProductViewModel.saveProduct(nameProduct, cost, resumePlantation)
-
         }
 
     }

@@ -24,7 +24,9 @@ class NewProductViewModel : ViewModel() {
             msg.value = "Debe digitar nombre, precio, nombre de la finca y realizar una breve descripcion"
         }else{
             dataValidate.value = true
+
         }
+
 
     }
 

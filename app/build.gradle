@@ -5,14 +5,13 @@ plugins {
     id 'kotlin-kapt'
 
 }
-
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
-        applicationId "com.fmauriciors.projectaromascafetales"
+        applicationId "com.cubidevs.bookproject"
         minSdk 21
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -26,16 +25,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility sourceCompatibility3
-        targetCompatibility targetCompatibility3
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = '1.8'
     }
     buildFeatures{
-        viewBinding = true
+        viewBinding true
     }
 }
+
 
 dependencies {
 
