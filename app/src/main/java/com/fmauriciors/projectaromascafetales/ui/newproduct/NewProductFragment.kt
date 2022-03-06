@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 
 import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
+import com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragmentDirections
 
 
 class NewProductFragment : Fragment() {
@@ -22,39 +24,37 @@ class NewProductFragment : Fragment() {
     ): View {
 
         newProductBinding = FragmentNewProductBinding.inflate(inflater, container, false)
-        newProductViewModel = ViewModelProvider(this).get(NewProductViewModel::class.java)
+        newProductViewModel = ViewModelProvider(this)[NewProductViewModel::class.java]
         return newProductBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /*newProductBinding.saveButton.setOnClickListener {
-            findNavController().navigate(NewProductFragmentDirections.actionNewProductFragmentToDetailProductFragment())
-        }*/
+
         newProductViewModel.msgDone.observe(viewLifecycleOwner) { result ->
             onMsgDoneSubscribe(result)
-
         }
-
-       newProductViewModel.dateValidate.observe(viewLifecycleOwner) { result ->
+        newProductViewModel.dataValidated.observe(viewLifecycleOwner) { result ->
             onDataValidatedSubscribe(result)
 
-           with(newProductBinding){
+            with(newProductBinding) {
 
 
-               saveProductButton.setOnClickListener {
+                saveProductButton.setOnClickListener {
 
-                   newProductViewModel.validateFields(
-                       nameProductEditText.text.toString(),
-                       costProductEditText.text.toString(),
-                       resumeProductEditText.text.toString()
-                   )
-               }
-           }
+                    newProductViewModel.validateFields(
+                        nameProductEditText.text.toString(),
+                        costProductEditText.text.toString(),
+                        resumeProductEditText.text.toString()
+                    )
+                }
+            }
 
         }
 
     }
+
+
     private fun onDataValidatedSubscribe(result: Boolean) {
         with(newProductBinding) {
             val nameProduct: String = nameProductEditText.text.toString()

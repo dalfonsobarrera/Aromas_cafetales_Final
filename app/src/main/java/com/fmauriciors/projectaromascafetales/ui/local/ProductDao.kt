@@ -10,16 +10,16 @@ import androidx.room.Query
 interface ProductDao {
 
     @Insert
-    suspend fun saveProduct ( product: Product)
+     fun saveProduct ( product: Product)
 
     /*@Query("SELECT * FROM table_books WHERE name LIKE :nameBook")
     suspend fun searchBook (nameBook:String): Book
 
     @Delete
-    suspend fun deleteBook(book: Book)
+    suspend fun deleteBook(book: Book)*/
 
-    @Query ("SELECT * FROM table_books")
-    suspend fun loadBooks(): MutableList<Book>*/
+    @Query ("SELECT * FROM table_products")
+     fun loadProducts(): MutableList<Product>
 
 
 }

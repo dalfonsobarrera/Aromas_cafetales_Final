@@ -34,13 +34,13 @@ class ProductRepository {
     suspend fun deleteBook(book: Book) {
         val bookDao: BookDao = BookProject.database.BookDao()
         bookDao.deleteBook(book)
-    }
-
-    suspend fun loadBooks(): ArrayList<Book>{
-        val bookDao: BookDao = BookProject.database.BookDao()
-        val booksList : ArrayList<Book> = bookDao.loadBooks() as ArrayList<Book>
-        return booksList
-
     }*/
+
+    suspend fun loadProducts(): ArrayList<Product>{
+        val productDao: ProductDao = ProductProject.database.ProductDao()
+        val productList : ArrayList<Product> = productDao.loadProducts() as ArrayList<Product>
+        return productList
+
+    }
 
 }

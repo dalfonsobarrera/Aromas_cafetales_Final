@@ -10,7 +10,7 @@ import java.sql.Types
 @Entity(tableName = "table_products")
 data class Product(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name="id") var id: Int = Types.NULL,
-    @ColumnInfo(name="name") var productName: String = "",
-    @ColumnInfo(name="author") var cost: String = "",
-    @ColumnInfo(name="resume") var resumePlantation: String = ""
+    @ColumnInfo(name="productName") var productName: String = "",
+    @ColumnInfo(name="cost") var cost: String = "",
+    @ColumnInfo(name="resumePlantation") var resumePlantation: String = ""
 ): Serializable

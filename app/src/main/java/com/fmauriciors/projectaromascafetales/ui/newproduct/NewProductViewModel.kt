@@ -12,13 +12,11 @@ import kotlinx.coroutines.launch
 class NewProductViewModel : ViewModel() {
 
     private val productRepository = ProductRepository()
-
-
     private val msg: MutableLiveData<String> = MutableLiveData()
     val msgDone: LiveData<String> = msg
 
     private val dataValidate: MutableLiveData<Boolean> = MutableLiveData()
-    val dateValidate: LiveData<Boolean> = dataValidate
+    val dataValidated: LiveData<Boolean> = dataValidate
 
     fun validateFields(nameProduct: String, cost: String, resumePlantation: String) {
 

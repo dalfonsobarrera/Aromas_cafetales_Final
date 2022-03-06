@@ -15,10 +15,13 @@
     <string name="resume_plantation">Breve descripcion</string>
     <string name="product_name">Nombre del producto</string>
     <string name="cost">Precio del producto</string>
-    <string name="add_procust">AGREGAR</string>
     <string name="title_activity_bottom">BottomActivity</string>
     <string name="title_list">casa</string>
     <string name="title_favoritos">favoritos</string>
     <string name="title_carrito">carrito</string>
+    <string name="example_tittle">Example Tittle</string>
+    <string name="example_product">Example Product</string>
+    <string name="example_brand">Example Brand</string>
+    <string name="save_product">Guardar</string>
 
 </resources>
