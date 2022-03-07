@@ -17,8 +17,7 @@ class NewProductFragment : Fragment() {
     private lateinit var newProductBinding: FragmentNewProductBinding
     private lateinit var newProductViewModel: NewProductViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 

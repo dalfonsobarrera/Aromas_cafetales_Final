@@ -4,6 +4,7 @@
     <string name="email_register_user">Correo eléctronico</string>
     <string name="password_register_user">Contraseña</string>
     <string name="repassword_register_user">Repita la contraseña</string>
+    <string name="register_user_button">Registrarse</string>
 
     <string name="email_login_user">Correo electrónico</string>
     <string name="password_login_user">Contraseña</string>

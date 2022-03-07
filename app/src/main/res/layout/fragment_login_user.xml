@@ -65,6 +65,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputEmailLoginLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="409dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -85,6 +86,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputPasswordLoginLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="409dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
