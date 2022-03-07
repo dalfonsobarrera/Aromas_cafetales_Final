@@ -8,27 +8,30 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="116dp"
-        app:cardCornerRadius="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
         app:cardMaxElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/statusBarLogin">
+            android:background="@color/violet">
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="100dp"
                 android:layout_height="85dp"
                 android:layout_marginStart="16dp"
+                android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.516"
-                app:srcCompat="@drawable/user"
-                android:contentDescription="@string/todo" />
+                app:srcCompat="@drawable/user" />
 
             <TextView
                 android:id="@+id/name_card_name_register_text_view"

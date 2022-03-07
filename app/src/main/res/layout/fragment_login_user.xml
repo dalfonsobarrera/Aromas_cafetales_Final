@@ -2,7 +2,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/styleLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,6 +9,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.styleLogin"
         tools:context=".ui.loginuser.LoginUserFragment">
 
         <ImageView
@@ -27,13 +27,12 @@
 
         <Button
             android:id="@+id/sign_in_button"
-            style="@style/styleLogin"
-            android:background="@color/toolBarLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/toolBarLogin"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textColor="@color/white"

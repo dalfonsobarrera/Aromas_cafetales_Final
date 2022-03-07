@@ -12,14 +12,16 @@ tools:context=".ui.detailregister.DetailRegisterFragment">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/example_register_user"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="31dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/email_card_register_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Example_email_register_user"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="81dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_card_register_text_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>
