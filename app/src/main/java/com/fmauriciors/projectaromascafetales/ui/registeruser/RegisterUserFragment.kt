@@ -46,6 +46,7 @@ class RegisterUserFragment : Fragment() {
                     passwordRegisterEditText.text.toString(),
                     repasswordRegisterEditText.text.toString()
                 )
+                findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
             }
         }
     }

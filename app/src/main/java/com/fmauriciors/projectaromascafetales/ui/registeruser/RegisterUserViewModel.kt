@@ -7,10 +7,12 @@ import androidx.core.util.PatternsCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.databinding.FragmentRegisterUserBinding
 import com.fmauriciors.projectaromascafetales.ui.repositorybd.ProductRepository
 import com.fmauriciors.projectaromascafetales.ui.repositorybd.RegisterRepository
+import com.fmauriciors.projectaromascafetales.ui.splashac.SplashAcFragmentDirections
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -34,47 +36,43 @@ class RegisterUserViewModel : ViewModel() {
                 emailRegister.isEmpty()  || passwordRegister.isEmpty() ||
                 repasswordRegister.isEmpty()){
                 msg.value = "Verifique que los campos Nombre, Teléfono, Email, Contraseña y Verificación de la contraseña estén completos"
-            }else{/*
+            }else{
+                /*
                validated()
                 if (validatedEmail() && validatedPassword()){
                     val nameUser: String = nameRegister.toString()
-                    val numberPhone: String = phoneRegister.toString()
+                    val numberPhone: String = phone.toString()
                     val email: String = emailRegister.toString()
                     val password: String = passwordRegister.toString()
                     val rePassword: String = repasswordRegister.toString()
 
                     if (password == rePassword) {
-                       /* val user = User (
+                         val user = User (
                             nameUser = nameUser,
                             //gender = gender,
                             numberPhone = numberPhone,
                             email = email,
-                            password = password
-                        )
-                        findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToLoginUserFragment())*/
+                            password = password)
+
+                       findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
                     }else {
 
                         msg.value = "Las contraseñas no coinciden"
                     }
                 }else {
-
                     msg.value = "Verifique correo y contraseña"
-                */
+                })*/
                 dataValidate.value = true
+                findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
             }
         }
-
-        fun saveRegister(
-            nameUser: String,
-            phone: String,
-            email: String,
-            password: String
-        ) {
-            GlobalScope.launch(Dispatchers.IO){
-               registerRepository.saveRegister(nameUser, phone, email,password)
-            }
+    fun saveRegister(nameUser: String, phone: String, email: String, password: String) {
+        GlobalScope.launch(Dispatchers.IO){
+            registerRepository.saveRegister(nameUser, phone, email,password)
         }
-
+    }
+}
+/*
     private fun validated(){
         val result = arrayOf(validatedEmail(), validatedPassword())
         if (false in result){
@@ -107,4 +105,4 @@ class RegisterUserViewModel : ViewModel() {
             true
         }
     }
-}
+*/

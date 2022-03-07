@@ -23,7 +23,7 @@ class RegisterRepository {
             password = password
         )
 
-        val registerDao : RegisterDao = RegisterProject.databaser.RegisterDao()
+        val registerDao : RegisterDao = RegisterProject.database.RegisterDao()
         registerDao.saveRegister(register)
     }
 
@@ -35,7 +35,7 @@ class RegisterRepository {
     }*/
 
     suspend fun loadRegisters(): ArrayList<Register>{
-        val registerDao: RegisterDao = RegisterProject.databaser.RegisterDao()
+        val registerDao: RegisterDao = RegisterProject.database.RegisterDao()
         val registerList : ArrayList<Register> = registerDao.loadRegisters() as ArrayList<Register>
         return registerList
     }
