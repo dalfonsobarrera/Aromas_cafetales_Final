@@ -39,14 +39,12 @@ class RegisterUserFragment : Fragment() {
         with(registerUserBinding) {
 
             registerUserButton.setOnClickListener {
-
                 registerUserViewModel.validateFields(
                     nameRegisterEditText.text.toString(),
                     phoneRegisterEditText.text.toString(),
                     emailRegisterEditText.text.toString(),
                     passwordRegisterEditText.text.toString(),
                     repasswordRegisterEditText.text.toString()
-
                 )
             }
         }
@@ -57,11 +55,9 @@ class RegisterUserFragment : Fragment() {
             val phone = phoneRegisterEditText.text.toString()
             val email = emailRegisterEditText.text.toString()
             val password = passwordRegisterEditText.text.toString()
-            val repassword = repasswordRegisterEditText.text.toString()
-
+            //val repassword = repasswordRegisterEditText.text.toString()
             registerUserViewModel.saveRegister(nameUser, phone, email, password)
         }
-
     }
 
     private fun onMsgDoneSubscribe(msg: String?) {
@@ -70,7 +66,6 @@ class RegisterUserFragment : Fragment() {
             msg,
             Toast.LENGTH_SHORT
         ).show()
-
     }
 }
 

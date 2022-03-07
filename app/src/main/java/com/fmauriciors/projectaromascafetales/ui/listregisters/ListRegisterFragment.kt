@@ -50,7 +50,6 @@ class ListRegisterFragment : Fragment() {
             adapter = registerAdapter
             setHasFixedSize(false)
         }
-
     }
 
     private fun onLoadRegistersDoneSubscribe(registersListLoaded: ArrayList<Register>) {

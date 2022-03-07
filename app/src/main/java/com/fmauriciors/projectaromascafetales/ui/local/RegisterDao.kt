@@ -1,6 +1,7 @@
 package com.fmauriciors.projectaromascafetales.ui.local
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
@@ -16,4 +17,6 @@ interface RegisterDao {
 
     @Query("SELECT * FROM table_register")
     suspend fun loadRegisters(): MutableList<Register>
+
+
 }

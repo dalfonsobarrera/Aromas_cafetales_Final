@@ -9,7 +9,7 @@ class RegisterRepository {
 
     suspend fun saveRegister(
         nameUser: String,
-        phoneNumber: String,
+        phone: String,
         email: String,
         password: String
 
@@ -18,12 +18,12 @@ class RegisterRepository {
 
             id = NULL,
             nameUser = nameUser,
-            phoneNumber = phoneNumber,
+            phone = phone,
             email = email,
             password = password
         )
 
-        val registerDao : RegisterDao = RegisterProject.database.RegisterDao()
+        val registerDao : RegisterDao = RegisterProject.databaser.RegisterDao()
         registerDao.saveRegister(register)
     }
 
@@ -35,10 +35,8 @@ class RegisterRepository {
     }*/
 
     suspend fun loadRegisters(): ArrayList<Register>{
-        val registerDao: RegisterDao = RegisterProject.database.RegisterDao()
+        val registerDao: RegisterDao = RegisterProject.databaser.RegisterDao()
         val registerList : ArrayList<Register> = registerDao.loadRegisters() as ArrayList<Register>
         return registerList
-
     }
-
 }

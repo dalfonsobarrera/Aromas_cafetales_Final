@@ -9,6 +9,9 @@
     <string name="email_login_user">Correo electrónico</string>
     <string name="password_login_user">Contraseña</string>
 
+    <string name="example_register_user">Example register user</string>
+    <string name="Example_email_register_user">Correo Registrado</string>
+
     <string name="app_name">Aromas Cafetales</string>
     <string name="image_splash_ac">Splash</string>
     <string name="email">Correo electronico</string>

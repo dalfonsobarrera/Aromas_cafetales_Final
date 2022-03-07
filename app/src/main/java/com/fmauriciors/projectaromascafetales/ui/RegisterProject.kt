@@ -9,13 +9,13 @@ class RegisterProject : Application() {
 
     companion object{
 
-        lateinit var  database: RegisterDatabase
+        lateinit var  databaser: RegisterDatabase
     }
 
     override fun onCreate() {
         super.onCreate()
 
-        database  = Room.databaseBuilder(
+        databaser  = Room.databaseBuilder(
 
             this,
             RegisterDatabase::class.java,

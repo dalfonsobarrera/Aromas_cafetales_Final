@@ -40,7 +40,5 @@ class ProductRepository {
         val productDao: ProductDao = ProductProject.database.ProductDao()
         val productList : ArrayList<Product> = productDao.loadProducts() as ArrayList<Product>
         return productList
-
     }
-
 }

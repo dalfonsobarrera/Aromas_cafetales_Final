@@ -26,8 +26,6 @@ class NewProductViewModel : ViewModel() {
             dataValidate.value = true
 
         }
-
-
     }
 
     fun saveProduct(

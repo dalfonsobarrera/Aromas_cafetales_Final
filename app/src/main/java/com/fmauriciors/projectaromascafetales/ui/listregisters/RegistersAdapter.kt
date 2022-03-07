@@ -43,7 +43,7 @@ class RegistersAdapter (
         fun bind(register: Register) {
             with(binding){
                 nameCardNameRegisterTextView.text = register.nameUser
-                nameCardPhoneRegisterTextView.text = register.phoneNumber
+                nameCardPhoneRegisterTextView.text = register.phone
 
             }
         }
