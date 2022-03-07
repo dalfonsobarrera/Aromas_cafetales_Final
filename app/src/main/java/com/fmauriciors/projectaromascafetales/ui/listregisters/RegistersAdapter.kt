@@ -8,40 +8,41 @@ import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.CardViewItemProductBinding
 import com.fmauriciors.projectaromascafetales.ui.listproducts.ProductsAdapter
 import com.fmauriciors.projectaromascafetales.ui.local.Product
+import com.fmauriciors.projectaromascafetales.ui.local.Register
 import java.util.ArrayList
 
 class RegistersAdapter (
-    private val productsList: ArrayList<Product>
+    private val registerList: ArrayList<Register>
 
-): RecyclerView.Adapter<ProductsAdapter.ProductViewHolder>(){
+): RecyclerView.Adapter<RegistersAdapter.RegisterViewHolder>(){
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RegisterViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.card_view_item_product, parent, false)
-        return ProductViewHolder(view)
+            LayoutInflater.from(parent.context).inflate(R.layout.card_view_user_register, parent, false)
+        return RegisterViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        val product = productsList[position]
-        holder.bind(product)
+    override fun onBindViewHolder(holder: RegisterViewHolder, position: Int) {
+        val register = registerList[position]
+        holder.bind(register)
     }
 
-    override fun getItemCount(): Int = productsList.size
+    override fun getItemCount(): Int = registerList.size
 
     fun appendItems(newList: ArrayList<Product>) {
-        productsList.clear()
-        productsList.addAll(newList)
+        registerList.clear()
+        registerList.addAll(newList)
         notifyDataSetChanged()
     }
 
-    class ProductViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        private val binding = CardViewItemProductBinding.bind(itemView)
-        fun bind(product: Product) {
+    class RegisterViewHolder(itemView: View): RecyclerRView.ViewHolder(itemView){
+        private val binding = CardViewItemRegisterBinding.bind(itemView)
+        fun bind(register: Register) {
             with(binding){
-                nameCardProductTextView.text = product.productName
-                nameCardCostoTextView.text = product.cost
-                nameCardResumeTextView.text = product.resumePlantation
+                nameCardNameRegisterTextView.text = register.nameUser
+                nameCardPhoneRegisterTextView.text = register.phoneNumber
+                nameCardEmailRegisterTextView.text = register.email
 
             }
         }
