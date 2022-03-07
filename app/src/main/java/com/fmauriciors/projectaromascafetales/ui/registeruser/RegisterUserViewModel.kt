@@ -63,7 +63,7 @@ class RegisterUserViewModel : ViewModel() {
                     msg.value = "Verifique correo y contraseña"
                 })*/
                 dataValidate.value = true
-                findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
+                //findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
             }
         }
     fun saveRegister(nameUser: String, phone: String, email: String, password: String) {

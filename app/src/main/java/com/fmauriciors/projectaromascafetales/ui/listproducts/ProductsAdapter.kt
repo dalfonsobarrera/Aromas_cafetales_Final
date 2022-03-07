@@ -41,7 +41,7 @@ class ProductsAdapter (
                 with(binding){
                     nameCardProductTextView.text = product.productName
                     nameCardCostoTextView.text = product.cost
-                    nameCardResumeTextView.text = product.resumePlantation
+                   // nameCardResumeTextView.text = product.resumePlantation
 
                 }
             }
