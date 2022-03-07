@@ -7,10 +7,11 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/StyleLogin"
+
+        style="@style/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/StyleLogin"
+        android:theme="@style/login"
         tools:context=".ui.loginuser.LoginUserFragment">
 
         <ImageView

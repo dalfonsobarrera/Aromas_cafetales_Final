@@ -23,7 +23,6 @@
     <string name="resgister">Registrarse</string>
     <string name="do_not_have_account"><u>¿No tienes cuenta? ¡Registrate!</u></string>
     <string name="sing_out">Salir de la sesión</string>
-    <string name="todo">TODO</string>
     <string name="main">Main</string>
     <string name="resume_plantation">Breve descripcion</string>
     <string name="product_name">Nombre del producto</string>
@@ -48,6 +47,7 @@
     <string name="name_register">Example_User</string>
     <string name="name_user">Example_user</string>
     <string name="name_phone">example_phone</string>
+    <string name="todo">TODO</string>
 
 
 </resources>
