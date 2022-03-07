@@ -1,6 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/toolBarLogin</item>
+        <item name="colorPrimaryVariant">@color/statusBarLogin</item>
+        <item name="colorOnPrimary">@color/darkmagenta</item>
+        <item name="colorOnBackground">@color/white</item>
+
+        <!-- colores secundarios -->
+        <item name="colorSecondary">@color/accentLogin</item>
+        <item name="colorSecondaryVariant">@color/orange</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
