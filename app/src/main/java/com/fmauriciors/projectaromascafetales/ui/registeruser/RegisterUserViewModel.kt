@@ -20,6 +20,7 @@ class RegisterUserViewModel : ViewModel() {
 
     private val registerRepository = RegisterRepository()
     private lateinit var registerUserBinding: FragmentRegisterUserBinding
+
     private val msg: MutableLiveData<String> = MutableLiveData()
     val msgDone: LiveData<String> = msg
 
@@ -33,7 +34,7 @@ class RegisterUserViewModel : ViewModel() {
             repasswordRegister.isEmpty()){
             msg.value = "Verifique que los campos Nombre, Teléfono, Email, Contraseña y Verificación de la contraseña estén completos"
         }else{
-            validated()
+          /*  validated()
             if (validatedEmail() && validatedPassword()){
                 val nameUser: String = nameRegister.toString()
                 val numberPhone: String = phoneRegister.toString()
@@ -42,7 +43,7 @@ class RegisterUserViewModel : ViewModel() {
                 val rePassword: String = repasswordRegister.toString()
 
                 if (password == rePassword) {
-                    /*val user = User (
+                   /* val user = User (
                         nameUser = nameUser,
                         //gender = gender,
                         numberPhone = numberPhone,
@@ -57,7 +58,7 @@ class RegisterUserViewModel : ViewModel() {
             }else {
 
                 msg.value = "Verifique correo y contraseña"
-            }
+            }*/
             dataValidate.value = true
 
         }

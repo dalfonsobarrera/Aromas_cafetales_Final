@@ -11,9 +11,9 @@ interface RegisterDao {
     @Insert
     suspend fun saveRegister ( register: Register)
 
-   /* @Query("SELECT * FROM table_register WHERE productName LIKE :nameProduct")
-    suspend fun searchProduct (nameProduct:String): Product*/
+    @Query("SELECT * FROM table_register WHERE nameUser LIKE :userName")
+    suspend fun searchRegister (userName:String): Register
 
     @Query("SELECT * FROM table_register")
-    suspend fun loadRegister(): MutableList<Product>
+    suspend fun loadRegisters(): MutableList<Register>
 }

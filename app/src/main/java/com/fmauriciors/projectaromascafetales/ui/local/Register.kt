@@ -5,10 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
 import java.sql.Types
+import java.sql.Types.NULL
 
 @Entity(tableName = "table_register")
 data class Register(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name="id") var id: Int = Types.NULL,
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name="id") var id: Int = NULL,
     @ColumnInfo(name="nameUser") var nameUser: String = "",
     @ColumnInfo(name="phoneNumber") var phoneNumber: String = "",
     @ColumnInfo(name="email") var email: String = "",

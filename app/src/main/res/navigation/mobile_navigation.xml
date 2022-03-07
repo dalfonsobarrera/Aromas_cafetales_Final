@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_registerUserFragment_to_loginUserFragment"
             app:destination="@id/loginUserFragment" />
+        <action
+            android:id="@+id/action_registerUserFragment_to_listRegisterFragment"
+            app:destination="@id/listRegisterFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailProductFragment"
@@ -88,4 +91,13 @@
         android:name="com.fmauriciors.projectaromascafetales.ui.main.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/listRegisterFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.listregisters.ListRegisterFragment"
+        android:label="fragment_list_register"
+        tools:layout="@layout/fragment_list_register" >
+        <argument
+            android:name="register"
+            app:argType="com.fmauriciors.projectaromascafetales.ui.local.Register" />
+    </fragment>
 </navigation>

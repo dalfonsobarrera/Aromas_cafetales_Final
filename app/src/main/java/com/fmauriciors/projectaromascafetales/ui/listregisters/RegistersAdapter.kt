@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.CardViewItemProductBinding
+import com.fmauriciors.projectaromascafetales.databinding.CardViewUserRegisterBinding
 import com.fmauriciors.projectaromascafetales.ui.listproducts.ProductsAdapter
 import com.fmauriciors.projectaromascafetales.ui.local.Product
 import com.fmauriciors.projectaromascafetales.ui.local.Register
@@ -30,19 +32,18 @@ class RegistersAdapter (
 
     override fun getItemCount(): Int = registerList.size
 
-    fun appendItems(newList: ArrayList<Product>) {
+    fun appendItems(newList: ArrayList<Register>) {
         registerList.clear()
         registerList.addAll(newList)
         notifyDataSetChanged()
     }
 
-    class RegisterViewHolder(itemView: View): RecyclerRView.ViewHolder(itemView){
-        private val binding = CardViewItemRegisterBinding.bind(itemView)
+    class RegisterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+        private val binding = CardViewUserRegisterBinding.bind(itemView)
         fun bind(register: Register) {
             with(binding){
                 nameCardNameRegisterTextView.text = register.nameUser
                 nameCardPhoneRegisterTextView.text = register.phoneNumber
-                nameCardEmailRegisterTextView.text = register.email
 
             }
         }

@@ -3,7 +3,7 @@ package com.fmauriciors.projectaromascafetales.ui.repositorybd
 import com.fmauriciors.projectaromascafetales.ui.RegisterProject
 import com.fmauriciors.projectaromascafetales.ui.local.Register
 import com.fmauriciors.projectaromascafetales.ui.local.RegisterDao
-import java.sql.Types
+import java.sql.Types.NULL
 
 class RegisterRepository {
 
@@ -16,7 +16,7 @@ class RegisterRepository {
     ) {
         val register = Register(
 
-            id = Types.NULL,
+            id = NULL,
             nameUser = nameUser,
             phoneNumber = phoneNumber,
             email = email,
@@ -27,20 +27,16 @@ class RegisterRepository {
         registerDao.saveRegister(register)
     }
 
-    /*suspend fun searchProduct(nameProduct: String): Product {
-        val productDao: ProductDao = ProductProject.database.ProductDao()
-        val  product = productDao.searchProduct(nameProduct)
-        return product
-    }
 
+/*
     suspend fun deleteProduct(product: Product) {
         val productDao: ProductDao = ProductProject.database.ProductDao()
         productDao.deleteProduct(product)
     }*/
 
-    suspend fun loadRegister(): ArrayList<Register>{
+    suspend fun loadRegisters(): ArrayList<Register>{
         val registerDao: RegisterDao = RegisterProject.database.RegisterDao()
-        val registerList : ArrayList<Register> = registerDao.loadRegister() as ArrayList<Register>
+        val registerList : ArrayList<Register> = registerDao.loadRegisters() as ArrayList<Register>
         return registerList
 
     }

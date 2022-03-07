@@ -42,7 +42,9 @@
     <string name="cancel">Cancelar</string>
     <string name="accept">Aceptar</string>
     <string name="update">Actualizar</string>
-
+    <string name="name_register">Example_User</string>
+    <string name="name_user">Example_user</string>
+    <string name="name_phone">example_phone</string>
 
 
 </resources>
