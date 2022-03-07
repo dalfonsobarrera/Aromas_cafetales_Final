@@ -20,8 +20,6 @@ buildscript {   //Colocar siempre de primero
     }
 }
 
-
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

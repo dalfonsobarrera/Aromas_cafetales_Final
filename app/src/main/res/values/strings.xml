@@ -5,6 +5,8 @@
     <string name="password_register_user">Contraseña</string>
     <string name="repassword_register_user">Repita la contraseña</string>
 
+    <string name="email_login_user">Correo electrónico</string>
+    <string name="password_login_user">Contraseña</string>
 
     <string name="app_name">Aromas Cafetales</string>
     <string name="image_splash_ac">Splash</string>
