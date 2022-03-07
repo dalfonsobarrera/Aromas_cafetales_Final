@@ -8,7 +8,7 @@
         android:id="@+id/loginUserFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment"
         android:label="LoginUserFragment"
-        tools:layout="@layout/fragment_login_user" >
+        tools:layout="@layout/fragment_login_user">
 
         <action
             android:id="@+id/action_loginUserFragment_to_listProductsFragment"
