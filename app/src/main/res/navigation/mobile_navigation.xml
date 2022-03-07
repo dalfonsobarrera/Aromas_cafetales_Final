@@ -8,22 +8,26 @@
         android:id="@+id/loginUserFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment"
         android:label="LoginUserFragment"
-        tools:layout="@layout/fragment_login_user" >
-        <action
-            android:id="@+id/action_loginUserFragment_to_registerUserFragment"
-            app:destination="@id/registerUserFragment" />
+        tools:layout="@layout/fragment_login_user">
+
         <action
             android:id="@+id/action_loginUserFragment_to_listProductsFragment"
             app:destination="@id/listProductsFragment" />
+        <action
+            android:id="@+id/action_loginUserFragment_to_registerUserFragment"
+            app:destination="@id/registerUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/listProductsFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.listproducts.ListProductsFragment"
-        android:label="fragment_list_products"
+        android:label="@string/title_list"
         tools:layout="@layout/fragment_list_products" >
         <action
             android:id="@+id/action_listProductsFragment_to_newProductFragment"
             app:destination="@id/newProductFragment" />
+        <action
+            android:id="@+id/action_listProductsFragment_to_deleteProductFragment"
+            app:destination="@id/deleteProductFragment" />
     </fragment>
     <fragment
         android:id="@+id/newProductFragment"
@@ -45,16 +49,45 @@
         android:label="fragment_register_user"
         tools:layout="@layout/fragment_register_user" >
         <action
-            android:id="@+id/action_registerUserFragment_to_detailRegisterFragment"
-            app:destination="@id/detailRegisterFragment" />
+            android:id="@+id/action_registerUserFragment_to_listRegisterFragment"
+            app:destination="@id/listRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.detailproduct.DetailProductFragment"
+        android:label="fragment_detail_product"
+        tools:layout="@layout/fragment_detail_product" >
+        <argument
+            android:name="product"
+            app:argType="com.fmauriciors.projectaromascafetales.ui.local.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.favorite.FavoriteFragment"
+        android:label="@string/title_favoritos"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/shopingFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.shoping.ShopingFragment"
+        android:label="fragment_shoping"
+        tools:layout="@string/title_carrito" />
+    <fragment
+        android:id="@+id/deleteProductFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.deleteproduct.DeleteProductFragment"
+        android:label="fragment_delete_product"
+        tools:layout="@layout/fragment_delete_product" />
+    <fragment
+        android:id="@+id/listRegisterFragment"
+        android:name="com.fmauriciors.projectaromascafetales.ui.listregisters.ListRegisterFragment"
+        android:label="fragment_list_register"
+        tools:layout="@layout/fragment_list_register" >
+        <argument
+            android:name="register"
+            app:argType="com.fmauriciors.projectaromascafetales.ui.local.Register" />
     </fragment>
     <fragment
         android:id="@+id/detailRegisterFragment"
         android:name="com.fmauriciors.projectaromascafetales.ui.detailregister.DetailRegisterFragment"
         android:label="fragment_detail_register"
-        tools:layout="@layout/fragment_detail_register" >
-        <action
-            android:id="@+id/action_detailRegisterFragment_to_loginUserFragment"
-            app:destination="@id/loginUserFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_detail_register" />
 </navigation>

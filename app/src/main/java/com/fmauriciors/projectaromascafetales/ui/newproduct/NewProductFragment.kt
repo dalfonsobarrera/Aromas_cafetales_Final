@@ -6,33 +6,68 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.fmauriciors.projectaromascafetales.R
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
+import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragmentDirections
+
 
 class NewProductFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = NewProductFragment()
-    }
+    private lateinit var newProductBinding: FragmentNewProductBinding
+    private lateinit var newProductViewModel: NewProductViewModel
 
-    private lateinit var viewModel: NewProductViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_new_product, container, false)
+    ): View {
+
+        newProductBinding = FragmentNewProductBinding.inflate(inflater, container, false)
+        newProductViewModel = ViewModelProvider(this)[NewProductViewModel::class.java]
+        return newProductBinding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(NewProductViewModel::class.java)
-        // TODO: Use the ViewModel
-        //
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        newProductViewModel.msgDone.observe(viewLifecycleOwner, { result ->
+            onMsgDoneSubscribe(result)
+        })
+        newProductViewModel.dataValidated.observe(viewLifecycleOwner, { result ->
+            onDataValidatedSubscribe(result)
+        })
 
+        with(newProductBinding) {
 
-        //
+            saveProductButton.setOnClickListener {
+
+                newProductViewModel.validateFields(
+                    nameProductEditText.text.toString(),
+                    costProductEditText.text.toString(),
+                    resumeProductEditText.text.toString()
+                )
+            }
+        }
 
     }
 
+
+    private fun onDataValidatedSubscribe(result: Boolean?) {
+        with(newProductBinding) {
+            val nameProduct = nameProductEditText.text.toString()
+            val cost = costProductEditText.text.toString()
+            val resumePlantation = resumeProductEditText.text.toString()
+
+            newProductViewModel.saveProduct(nameProduct, cost, resumePlantation)
+        }
+
+    }
+
+    private fun onMsgDoneSubscribe(msg: String?) {
+        Toast.makeText(
+            requireContext(),
+            msg,
+            Toast.LENGTH_SHORT
+        ).show()
+
+    }
 }

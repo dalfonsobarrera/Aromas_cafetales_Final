@@ -4,11 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding
+import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_overflow, menu)
+        menuInflater.inflate(R.menu.overflow_menu, menu)
         return true
     }
 
@@ -53,12 +53,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToLoginActivity() {
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, LoginUserFragment::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
-
-
-
-
 }
