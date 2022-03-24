@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.bottom.BottomActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_bottom">
             <intent-filter>
@@ -22,12 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity
-            android:name=".ui.main.MainActivity"
-            android:exported="true"
-            android:label="@string/title_activity_bottom"/>
 
 
     </application>

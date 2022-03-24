@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_splashAcFragment_to_loginUserFragment"
             app:destination="@id/loginUserFragment" />
+        <action
+            android:id="@+id/destination"
+            app:destination="@id/loginUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerUserFragment"
