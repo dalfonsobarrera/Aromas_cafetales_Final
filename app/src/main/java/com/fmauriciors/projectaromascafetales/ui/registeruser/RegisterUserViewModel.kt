@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 class RegisterUserViewModel : ViewModel() {
 
     private val registerRepository = RegisterRepository()
-    //private lateinit var auth: FirebaseAuth
+
     private lateinit var registerUserBinding: FragmentRegisterUserBinding
 
         private val msg: MutableLiveData<String> = MutableLiveData()
@@ -29,25 +29,12 @@ class RegisterUserViewModel : ViewModel() {
 
 
         fun validateFields(nameRegister: String, phone: String, emailRegister: String, passwordRegister: String, repasswordRegister: String) {
-            //auth = Firebase.auth
             if(nameRegister.isEmpty()  || phone.isEmpty()  ||
                 emailRegister.isEmpty()  || passwordRegister.isEmpty() ||
                 repasswordRegister.isEmpty()){
                 msg.value = "Verifique que los campos Nombre, Teléfono, Email, Contraseña y Verificación de la contraseña estén completos"
-
-              /*  auth.createUserWithEmailAndPassword(emailRegister, passwordRegister)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("Register full", "createUserWithEmail:success")
-
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("Register full", "createUserWithEmail:failure", task.exception)
-                            
-                        }
-                    }*/
             }else{
+
                 /*
                validated()
                 if (validatedEmail() && validatedPassword()){
@@ -81,6 +68,7 @@ class RegisterUserViewModel : ViewModel() {
         GlobalScope.launch(Dispatchers.IO){
             registerRepository.saveRegister(nameUser, phone, email,password)
         }
+
     }
 }
 /*

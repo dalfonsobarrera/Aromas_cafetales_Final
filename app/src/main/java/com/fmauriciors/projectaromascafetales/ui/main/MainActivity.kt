@@ -2,6 +2,7 @@ package com.fmauriciors.projectaromascafetales.ui.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -17,13 +18,20 @@ import androidx.navigation.ui.setupWithNavController
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.ActivityBottomBinding
 import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding
+import com.fmauriciors.projectaromascafetales.databinding.FragmentRegisterUserBinding
 import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragment
+import com.fmauriciors.projectaromascafetales.ui.registeruser.RegisterUserViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding
     private lateinit var bottomBarbinding: ActivityBottomBinding
+
+
 
     override fun onBackPressed(){
         super.onBackPressed()
@@ -58,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar?.show()
             }
         }
-    }
+         }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.overflow_menu, menu)
@@ -77,6 +85,7 @@ class MainActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
+
 
 
 

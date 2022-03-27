@@ -1,16 +1,20 @@
 package com.fmauriciors.projectaromascafetales.ui.registeruser
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.util.PatternsCompat
 import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentRegisterUserBinding
+import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -20,6 +24,7 @@ class RegisterUserFragment : Fragment() {
 
     private lateinit var registerUserViewModel: RegisterUserViewModel
     private lateinit var registerUserBinding: FragmentRegisterUserBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -54,7 +59,11 @@ class RegisterUserFragment : Fragment() {
             }
         }
     }
+
+
     private fun onDataValidatedSubscribe(result: Boolean?) {
+        auth = Firebase.auth
+
         with(registerUserBinding) {
             val nameUser = nameRegisterEditText.text.toString()
             val phone = phoneRegisterEditText.text.toString()
@@ -62,8 +71,26 @@ class RegisterUserFragment : Fragment() {
             val password = passwordRegisterEditText.text.toString()
             //val repassword = repasswordRegisterEditText.text.toString()
             registerUserViewModel.saveRegister(nameUser, phone, email, password)
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+
+                        Log.d("Register full", "createUserWithEmail:success")
+                        findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToLoginUserFragment())
+                    } else {
+                        Log.w("Register full", "createUserWithEmail:failure", task.exception)
+                        Toast.makeText(
+                            requireContext(), task.exception?.message.toString(),
+                            Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
         }
+
     }
+
+
 
     private fun onMsgDoneSubscribe(msg: String?) {
         Toast.makeText(

@@ -45,7 +45,7 @@ class DeleteProductFragment : Fragment() {
             .setTitle(resources.getString(R.string.warning_title))
             .setMessage(
                 resources.getString(
-                    R.string.delete_book_msg,
+                    R.string.delete_product_msg,
                     product.productName,
                     product.cost
                 )
