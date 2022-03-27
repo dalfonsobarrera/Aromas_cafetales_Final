@@ -51,6 +51,7 @@ class ListProductsFragment : Fragment() {
         listProductsBinding.searchProductButton.setOnClickListener {
             findNavController().navigate(ListProductsFragmentDirections.actionListProductsFragmentToDeleteProductFragment())
         }
+
     }
 
     private fun onLoadProductsDoneSubscribe(productsListLoaded: ArrayList<Product>) {

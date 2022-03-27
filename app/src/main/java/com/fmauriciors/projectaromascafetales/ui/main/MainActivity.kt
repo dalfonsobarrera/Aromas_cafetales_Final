@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding
     private lateinit var bottomBarbinding: ActivityBottomBinding
+    private lateinit var auth: FirebaseAuth
 
 
 
@@ -40,19 +41,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
       bottomBarbinding = ActivityBottomBinding.inflate(layoutInflater)
         setContentView(bottomBarbinding.root)
+        auth = Firebase.auth
 
         val navView: BottomNavigationView = bottomBarbinding.navView
-
         val navController = findNavController(R.id.nav_host_fragment_activity_bottom)
-
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.listProductsFragment, R.id.favoriteFragment, R.id.shopingFragment
             )
         )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -75,15 +75,20 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.menu_sing_out -> goToLoginActivity()
+
+            R.id.menu_sing_out -> {
+                auth.signOut()
+                goToLogin()
+            }
         }
         return super.onOptionsItemSelected(item)
     }
 
-    private fun goToLoginActivity() {
-        val intent = Intent(this, LoginUserFragment::class.java)
+    private fun goToLogin() {
+        findNavController(R.id.nav_host_fragment_activity_bottom)
+        /*val intent = Intent(this, LoginUserFragment::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
+        startActivity(intent)*/
     }
 
 

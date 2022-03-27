@@ -59,6 +59,7 @@ class LoginUserFragment : Fragment() {
         with(loginUserBinding){
                 val email = emailLoginEditText.text.toString()
                 val password = passwordLoginEditText.text.toString()
+               // auth.sendPasswordResetEmail(email) // restablecer password
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener() { task ->
                         if (task.isSuccessful) {

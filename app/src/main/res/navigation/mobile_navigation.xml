@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_listProductsFragment_to_deleteProductFragment"
             app:destination="@id/deleteProductFragment" />
+        <action
+            android:id="@+id/action_listProductsFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
     </fragment>
     <fragment
         android:id="@+id/newProductFragment"
@@ -45,6 +48,9 @@
         <action
             android:id="@+id/destination"
             app:destination="@id/loginUserFragment" />
+        <action
+            android:id="@+id/action_splashAcFragment_to_listProductsFragment"
+            app:destination="@id/listProductsFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerUserFragment"
@@ -96,4 +102,9 @@
         android:name="com.fmauriciors.projectaromascafetales.ui.detailregister.DetailRegisterFragment"
         android:label="fragment_detail_register"
         tools:layout="@layout/fragment_detail_register" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.fmauriciors.projectaromascafetales.ui.main.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

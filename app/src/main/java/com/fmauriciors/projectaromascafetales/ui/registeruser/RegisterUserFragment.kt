@@ -14,9 +14,11 @@ import androidx.core.util.PatternsCompat
 import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentRegisterUserBinding
+import com.fmauriciors.projectaromascafetales.server.User
 import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.regex.Pattern
 
@@ -78,6 +80,9 @@ class RegisterUserFragment : Fragment() {
 
                         Log.d("Register full", "createUserWithEmail:success")
                         findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToLoginUserFragment())
+
+                        createUser(auth.currentUser?.uid, email)
+
                     } else {
                         Log.w("Register full", "createUserWithEmail:failure", task.exception)
                         Toast.makeText(
@@ -90,6 +95,10 @@ class RegisterUserFragment : Fragment() {
 
     }
 
+    private fun createUser(uid: String?, email: String) {
+        val db = Firebase.firestore
+        val user = User()
+    }
 
 
     private fun onMsgDoneSubscribe(msg: String?) {

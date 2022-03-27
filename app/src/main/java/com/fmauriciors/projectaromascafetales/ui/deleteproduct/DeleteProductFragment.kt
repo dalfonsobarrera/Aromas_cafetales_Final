@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentDeleteProductBinding
 import com.fmauriciors.projectaromascafetales.local.Product
@@ -25,13 +26,12 @@ class DeleteProductFragment : Fragment() {
         deleteProductViewModel = ViewModelProvider(this)[DeleteProductViewModel::class.java]
         return deleteproductBinding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        deleteProductViewModel.findProductDone.observe(viewLifecycleOwner, { result ->
+        deleteProductViewModel.findProductDone.observe(viewLifecycleOwner) { result ->
             onFindProductDoneSubscribe(result)
-        })
+        }
 
         with(deleteproductBinding) {
             searchProduct.setOnClickListener {
@@ -39,8 +39,10 @@ class DeleteProductFragment : Fragment() {
             }
         }
     }
-
-    private fun onFindProductDoneSubscribe(product: Product) {
+    private fun onFindProductDoneSubscribe(product: Product?) {
+        if (product == null){
+            Toast.makeText(requireContext(), "Producto no encontrado", Toast.LENGTH_SHORT).show()
+        } else{
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(resources.getString(R.string.warning_title))
             .setMessage(
@@ -51,12 +53,12 @@ class DeleteProductFragment : Fragment() {
                 )
             )
             .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
-                // Respond to negative button press
             }
             .setPositiveButton(resources.getString(R.string.accept)) { dialog, which ->
                 deleteProductViewModel.deleteProduct(product)
                 deleteproductBinding.nameSearchEditText.text?.clear()
             }
             .show()
+        }
     }
 }
