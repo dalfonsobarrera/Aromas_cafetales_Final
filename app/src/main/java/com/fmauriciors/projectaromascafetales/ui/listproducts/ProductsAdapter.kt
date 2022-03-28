@@ -38,7 +38,7 @@ class ProductsAdapter (
             private val binding = CardViewItemProductBinding.bind(itemView)
             fun bind(product: Product) {
                 with(binding){
-                    nameCardProductTextView.text = product.productName
+                    nameCardProductTextView.text = product.nameProduct
                     nameCardCostoTextView.text = product.cost
                    // nameCardResumeTextView.text = product.resumePlantation
 

@@ -29,12 +29,12 @@ class NewProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        newProductViewModel.msgDone.observe(viewLifecycleOwner, { result ->
+        newProductViewModel.msgDone.observe(viewLifecycleOwner) { result ->
             onMsgDoneSubscribe(result)
-        })
-        newProductViewModel.dataValidated.observe(viewLifecycleOwner, { result ->
+        }
+        newProductViewModel.dataValidated.observe(viewLifecycleOwner) { result ->
             onDataValidatedSubscribe(result)
-        })
+        }
 
         with(newProductBinding) {
 
@@ -57,7 +57,8 @@ class NewProductFragment : Fragment() {
             val cost = costProductEditText.text.toString()
             val resumePlantation = resumeProductEditText.text.toString()
 
-            newProductViewModel.saveProduct(nameProduct, cost, resumePlantation)
+            //newProductViewModel.saveProduct(nameProduct, cost, resumePlantation)
+            newProductViewModel.saveProductInServer(nameProduct, cost, resumePlantation)
         }
 
     }

@@ -14,6 +14,7 @@ import androidx.core.util.PatternsCompat
 import androidx.navigation.fragment.findNavController
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentRegisterUserBinding
+import com.fmauriciors.projectaromascafetales.server.Role
 import com.fmauriciors.projectaromascafetales.server.User
 import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
@@ -92,12 +93,17 @@ class RegisterUserFragment : Fragment() {
                     }
                 }
         }
-
     }
 
     private fun createUser(uid: String?, email: String) {
         val db = Firebase.firestore
-        val user = User()
+        val user = User(uid = uid, email = email, role = Role.VENDEDOR)
+        uid?.let{uid ->
+        db.collection("users").document(uid).set(user)
+            .addOnSuccessListener {
+                Toast.makeText(requireContext(),"Usurio registrado exitosamente", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 

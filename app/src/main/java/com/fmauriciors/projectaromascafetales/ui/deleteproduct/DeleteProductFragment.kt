@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentDeleteProductBinding
 import com.fmauriciors.projectaromascafetales.local.Product
+import com.fmauriciors.projectaromascafetales.server.ProductServer
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class DeleteProductFragment : Fragment() {
@@ -33,32 +34,67 @@ class DeleteProductFragment : Fragment() {
             onFindProductDoneSubscribe(result)
         }
 
+        deleteProductViewModel.findProductServerDone.observe(viewLifecycleOwner){ result ->
+            onFindProductServerDoneSubscribe(result)
+
+        }
+
         with(deleteproductBinding) {
             searchProduct.setOnClickListener {
                 deleteProductViewModel.searchProduct(nameSearchEditText.text.toString())
             }
         }
     }
+
+    private fun onFindProductServerDoneSubscribe(product: ProductServer?) {
+        if (product == null){
+            Toast.makeText(requireContext(),"Producto no encotrado", Toast.LENGTH_SHORT).show()
+        }else{
+
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(resources.getString(R.string.warning_title))
+                .setMessage(
+                    resources.getString(
+                        R.string.delete_product_msg,
+                        product.nameProduct,
+                        product.cost
+                    )
+                )
+                .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
+                }
+                .setPositiveButton(resources.getString(R.string.accept)) { dialog, which ->
+                    deleteProductViewModel.deleteProductServer(product)
+                    deleteproductBinding.nameSearchEditText.text?.clear()
+                }
+                .show()
+        }
+
+        }
+
+
+
+
     private fun onFindProductDoneSubscribe(product: Product?) {
         if (product == null){
             Toast.makeText(requireContext(), "Producto no encontrado", Toast.LENGTH_SHORT).show()
         } else{
-        MaterialAlertDialogBuilder(requireContext())
-            .setTitle(resources.getString(R.string.warning_title))
-            .setMessage(
-                resources.getString(
-                    R.string.delete_product_msg,
-                    product.productName,
-                    product.cost
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(resources.getString(R.string.warning_title))
+                .setMessage(
+                    resources.getString(
+                        R.string.delete_product_msg,
+                        product.nameProduct,
+                        product.cost
+                    )
                 )
-            )
-            .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
-            }
-            .setPositiveButton(resources.getString(R.string.accept)) { dialog, which ->
-                deleteProductViewModel.deleteProduct(product)
-                deleteproductBinding.nameSearchEditText.text?.clear()
-            }
-            .show()
+                .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
+                }
+                .setPositiveButton(resources.getString(R.string.accept)) { dialog, which ->
+                    deleteProductViewModel.deleteProduct(product)
+                    deleteproductBinding.nameSearchEditText.text?.clear()
+                }
+                .show()
         }
     }
 }
+

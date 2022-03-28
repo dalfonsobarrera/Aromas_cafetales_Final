@@ -8,7 +8,7 @@ import java.sql.Types.NULL
 class ProductRepository {
 
     suspend fun saveProduct(
-        productName: String,
+        nameProduct: String,
         cost: String,
         resumePlantation: String
 
@@ -16,7 +16,7 @@ class ProductRepository {
         val product = Product(
 
             id = NULL,
-            productName = productName,
+            nameProduct = nameProduct,
             cost = cost,
             resumePlantation = resumePlantation
         )

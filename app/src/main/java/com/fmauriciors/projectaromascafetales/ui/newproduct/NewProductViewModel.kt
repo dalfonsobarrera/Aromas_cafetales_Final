@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.fmauriciors.projectaromascafetales.local.repositorybd.ProductRepository
+import com.fmauriciors.projectaromascafetales.server.serverrepository.ProductServerRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -11,6 +12,7 @@ import kotlinx.coroutines.launch
 class NewProductViewModel : ViewModel() {
 
     private val productRepository = ProductRepository()
+    private val productServerRepository = ProductServerRepository()
 
     private val msg: MutableLiveData<String> = MutableLiveData()
     val msgDone: LiveData<String> = msg
@@ -34,6 +36,12 @@ class NewProductViewModel : ViewModel() {
     ) {
         GlobalScope.launch(Dispatchers.IO){
             productRepository.saveProduct(nameProduct, cost, resumePlantation)
+        }
+    }
+
+    fun saveProductInServer(nameProduct: String, cost: String, resumePlantation: String) {
+        GlobalScope.launch ( Dispatchers.IO ){
+            productServerRepository.saveProduct(nameProduct, cost, resumePlantation)
         }
     }
 }
