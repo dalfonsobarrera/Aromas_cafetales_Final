@@ -26,6 +26,7 @@
         <item name="colorPrimaryVariant">@color/statusBarResgister</item>
         <item name="colorAccent">@color/accentRegister</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:fontFamily">@font/zeyada</item>
     </style>
 
 
