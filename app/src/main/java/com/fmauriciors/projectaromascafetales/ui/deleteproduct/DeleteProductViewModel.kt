@@ -7,6 +7,7 @@ import com.fmauriciors.projectaromascafetales.local.Product
 import com.fmauriciors.projectaromascafetales.local.repositorybd.ProductRepository
 import com.fmauriciors.projectaromascafetales.server.ProductServer
 import com.fmauriciors.projectaromascafetales.server.serverrepository.ProductServerRepository
+import com.google.firebase.firestore.ktx.toObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -23,7 +24,18 @@ class DeleteProductViewModel : ViewModel() {
     fun searchProduct(nameProduct: String) {
         GlobalScope.launch(Dispatchers.IO) {
            // findProduct.postValue(productRepository.searchProduct(nameProduct))
-            findProductServer.postValue(productServerRepository.searchProduct(nameProduct))
+            //findProductServer.postValue(productServerRepository.searchProduct(nameProduct))
+
+            val result = productServerRepository.loadproducts()
+            var isFoundProduct = false
+            for (document in result) {
+                val productServer: ProductServer = document.toObject<ProductServer>()
+                if (nameProduct == productServer.nameProduct) {
+                    findProductServer.postValue(productServer)
+                    isFoundProduct = true
+                }
+            }
+            if (!isFoundProduct) findProductServer.postValue(null)
         }
 
     }

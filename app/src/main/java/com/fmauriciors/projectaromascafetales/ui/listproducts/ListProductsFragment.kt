@@ -32,11 +32,12 @@ class ListProductsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        listProductsViewModel.loadProductDone.observe(viewLifecycleOwner, { result ->
+        listProductsViewModel.loadProductDone.observe(viewLifecycleOwner) { result ->
             onLoadProductsDoneSubscribe(result)
-        })
+        }
 
-       listProductsViewModel.loadProducts()
+        //listProductsViewModel.loadProducts()
+        listProductsViewModel.loadProductsFromServer()
 
         productsAdapter = ProductsAdapter(productsList)
 

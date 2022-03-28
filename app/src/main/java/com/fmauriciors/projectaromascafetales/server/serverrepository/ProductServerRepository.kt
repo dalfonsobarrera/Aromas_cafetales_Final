@@ -2,10 +2,13 @@ package com.fmauriciors.projectaromascafetales.server.serverrepository
 
 import com.fmauriciors.projectaromascafetales.local.Product
 import com.fmauriciors.projectaromascafetales.server.ProductServer
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
-import java.sql.Types
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.tasks.await
 
 class ProductServerRepository {
 
@@ -26,7 +29,7 @@ class ProductServerRepository {
 
     }
 
-    fun searchProduct(nameProduct: String) :  ProductServer? {
+    /*fun searchProduct(nameProduct: String) :  ProductServer? {
         var productServerFound : ProductServer? = null
         db.collection("products")
             .get()
@@ -40,6 +43,12 @@ class ProductServerRepository {
                 }
             }
         return productServerFound
+    }*/
+
+    suspend fun loadproducts(): QuerySnapshot {
+        return withContext(Dispatchers.IO) {
+            db.collection("products").get().await()
+        }
     }
 
     fun deleteProduct(product: ProductServer) {

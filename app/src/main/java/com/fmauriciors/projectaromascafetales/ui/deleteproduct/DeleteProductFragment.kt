@@ -71,9 +71,6 @@ class DeleteProductFragment : Fragment() {
 
         }
 
-
-
-
     private fun onFindProductDoneSubscribe(product: Product?) {
         if (product == null){
             Toast.makeText(requireContext(), "Producto no encontrado", Toast.LENGTH_SHORT).show()
