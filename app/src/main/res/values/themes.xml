@@ -44,9 +44,14 @@
     </style>
 
     <style name="FontStyle">
-        <item name="android:fontFamily">@font/zeyada</item>
+        <item name="android:fontFamily">@font/caveat_brush</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="FontStyle.Tilte">
+        <item name="android:textSize">20sp</item>
+        <item name="textInputStyle">bold</item>
     </style>
 
     <style name="FontStyleButton" parent="FontStyle">
