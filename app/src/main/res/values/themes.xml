@@ -53,5 +53,5 @@
         <item name="android:textSize">22sp</item>
     </style>
 
-
+    <style name="FontColor">"@color/white"</style>
 </resources>
