@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/textura"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,26 +14,69 @@
         tools:context=".ui.loginuser.LoginUserFragment">
 
         <ImageView
-            android:id="@+id/logo_image_view"
-            android:layout_width="248dp"
-            android:layout_height="182dp"
-            android:layout_marginTop="84dp"
+            android:id="@+id/separator_image_view"
+            android:layout_width="410dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="4dp"
             android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/box_top"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/container_image_view"
+            android:layout_width="411dp"
+            android:layout_height="539dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/box_bottom"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator_image_view"
+            app:srcCompat="@drawable/box_bottom" />
+
+        <ImageView
+            android:id="@+id/oval_user_background_image_view"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/toolBarLogin"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/container_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/container_image_view"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/container_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/separator_image_view"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/circulo"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="154dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/oval_user_background_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/oval_user_background_image_view"
+            app:layout_constraintStart_toStartOf="@+id/oval_user_background_image_view"
+            app:layout_constraintTop_toTopOf="@+id/oval_user_background_image_view"
             app:srcCompat="@drawable/user"
             tools:ignore="ImageContrastCheck" />
 
         <Button
             android:id="@+id/sign_in_button"
+            style="@style/FontStyleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/toolBarLogin"
+            android:background="@drawable/button_corners"
+            android:fontFamily="@font/zeyada"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -45,11 +89,13 @@
 
         <TextView
             android:id="@+id/register_text_view"
+            style="@style/FontStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/zeyada"
             android:text="@string/do_not_have_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -62,18 +108,20 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="300dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/oval_user_background_image_view">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/TextInputEmailLoginEditText"
+                style="@style/FontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zeyada"
                 android:hint="@string/email_login_user"
                 tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -84,7 +132,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"
@@ -93,8 +141,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/TextInputPasswordLoginEditText"
+                style="@style/FontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zeyada"
                 android:hint="@string/password_login_user"
                 tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
