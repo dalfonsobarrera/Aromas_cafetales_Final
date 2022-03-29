@@ -7,6 +7,15 @@
     android:theme="@style/AppTheme.styleGeneral"
     tools:context=".ui.deleteproduct.DeleteProductFragment">
 
+    <ImageView
+        android:id="@+id/bg_delete_product_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sologlobos"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_product_text_input_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -15,6 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/button_corners"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/search_product"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

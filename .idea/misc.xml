@@ -31,9 +31,9 @@
         <entry key="app/src/main/res/drawable/circulo.xml" value="0.3515" />
         <entry key="app/src/main/res/layout/activity_bottom.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/card_view_item_product.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/card_view_item_product.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_view_user_register.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_delete_product.xml" value="0.43297587131367293" />
+        <entry key="app/src/main/res/layout/fragment_delete_product.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_detail_product.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_detail_register.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.35625" />
