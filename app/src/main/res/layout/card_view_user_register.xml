@@ -7,6 +7,14 @@
     >
 
 
+    <ImageView
+        android:id="@+id/bg_cardview_user_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/sologlobos"
+        tools:ignore="ImageContrastCheck" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +62,7 @@
 
             <TextView
                 android:id="@+id/name_card_name_register_text_view"
-                style="@style/FontStyle.Tilte"
+                style="@style/FontStyle.Title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

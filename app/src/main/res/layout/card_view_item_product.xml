@@ -8,6 +8,14 @@
     android:padding="4dp">
 
 
+    <ImageView
+        android:id="@+id/bg_cardview_item_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/sologlobos"
+        tools:ignore="ImageContrastCheck" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

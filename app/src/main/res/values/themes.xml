@@ -6,6 +6,7 @@
         <item name="colorPrimaryVariant">@color/statusBarGeneral</item>
         <item name="colorSecondary">@color/accentGeneral</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:fontFamily">@font/caveat_brush</item>
 
     </style>
 
@@ -49,9 +50,8 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="FontStyle.Tilte">
+    <style name="FontStyle.Title">
         <item name="android:textSize">20sp</item>
-        <item name="textInputStyle">bold</item>
     </style>
 
     <style name="FontStyleButton" parent="FontStyle">
