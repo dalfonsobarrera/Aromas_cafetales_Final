@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_sing_out"
+        android:id="@+id/loginUserFragment"
         android:title="@string/sing_out" />
 
 </menu>

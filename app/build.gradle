@@ -4,7 +4,7 @@ plugins {
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
-    //id 'com.google.firebase.crashlytics'
+//    id 'com.google.firebase.crashlytics'
 
 }
 android {
@@ -45,7 +45,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx:24.1.0'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
-    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.9'
+    //implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.9'
     implementation 'com.google.firebase:firebase-analytics-ktx:20.1.1'
     def room_version = "2.4.2"
 
