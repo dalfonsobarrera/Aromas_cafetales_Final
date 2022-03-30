@@ -1,18 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:fontFamily">@font/caveat_brush</item>
+    </style>
 
+    <style name="AppTheme.styleGeneral">
         <item name="colorPrimary">@color/toolBarGeneral</item>
         <item name="colorPrimaryVariant">@color/statusBarGeneral</item>
         <item name="colorSecondary">@color/accentGeneral</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <item name="android:fontFamily">@font/caveat_brush</item>
-
-    </style>
-
-
-    <style name="AppTheme.styleGeneral">
-
     </style>
 
     <style name="AppTheme.styleLogin"  parent="Theme.MaterialComponents.DayNight.DarkActionBar">
@@ -22,15 +18,19 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
 
-    <style name="AppTheme.styleRegister" >
+    <style name="AppTheme.styleRegister"  parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/toolBarRegister</item>
         <item name="colorPrimaryVariant">@color/statusBarResgister</item>
         <item name="colorAccent">@color/accentRegister</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <item name="android:fontFamily">@font/zeyada</item>
     </style>
 
-
+    <style name="AppTheme.styleProduct" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/toolBarProduct</item>
+        <item name="colorPrimaryVariant">@color/statusBarProduct</item>
+        <item name="colorAccent">@color/accentProduct</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
 
     <style name="TextViewTitle">
         <item name="android:textColor">@color/black</item>

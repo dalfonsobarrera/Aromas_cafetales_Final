@@ -17,7 +17,6 @@ class NewProductViewModel : ViewModel() {
 
     private val dataValidate: MutableLiveData<Boolean> = MutableLiveData()
     val dataValidated: LiveData<Boolean> = dataValidate
-
     fun validateFields(nameProduct: String, cost: String, resumePlantation: String) {
 
         if(nameProduct.isEmpty() || cost.isEmpty() ||  resumePlantation.isEmpty()){

@@ -10,17 +10,15 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        app:cardCornerRadius="12dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:cardMaxElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/violet">
+            android:background="@color/statusBarGeneral">
 
             <ImageView
                 android:id="@+id/circle_background_image_view"
@@ -28,7 +26,7 @@
                 android:layout_height="102dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/circulo"
-                android:backgroundTint="@color/toolBarLogin"
+                android:backgroundTint="@color/white75"
                 android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

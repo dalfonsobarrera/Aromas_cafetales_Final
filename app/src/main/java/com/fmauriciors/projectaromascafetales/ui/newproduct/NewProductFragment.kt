@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.FragmentNewProductBinding
 import com.fmauriciors.projectaromascafetales.ui.loginuser.LoginUserFragmentDirections
 
@@ -23,6 +24,7 @@ class NewProductFragment : Fragment() {
 
         newProductBinding = FragmentNewProductBinding.inflate(inflater, container, false)
         newProductViewModel = ViewModelProvider(this)[NewProductViewModel::class.java]
+        context?.theme?.applyStyle(R.style.AppTheme_styleProduct, true)
         return newProductBinding.root
     }
 

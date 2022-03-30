@@ -29,21 +29,24 @@
         <entry key="app/src/main/res/drawable/box_top.xml" value="0.3515" />
         <entry key="app/src/main/res/drawable/button_corners.xml" value="0.3575" />
         <entry key="app/src/main/res/drawable/circulo.xml" value="0.3515" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.3575" />
         <entry key="app/src/main/res/layout/activity_bottom.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/card_view_item_product.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_view_user_register.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_delete_product.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_delete_product.xml" value="0.43297587131367293" />
         <entry key="app/src/main/res/layout/fragment_detail_product.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_detail_register.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_list_products.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_list_register.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_login_user.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_login_user.xml" value="0.43297587131367293" />
         <entry key="app/src/main/res/layout/fragment_new_product.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_register_user.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_shoping.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_splash_ac.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/overflow_menu.xml" value="0.35625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_1.xml" value="0.3575" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3575" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3575" />

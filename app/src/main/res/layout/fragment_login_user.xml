@@ -2,7 +2,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/textura"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -14,12 +13,66 @@
         tools:context=".ui.loginuser.LoginUserFragment">
 
         <ImageView
+            android:id="@+id/oval_big_blue_image_view"
+            android:layout_width="305dp"
+            android:layout_height="301dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="28dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/purpleOvalColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_big_pink_image_view"
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:layout_marginTop="124dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/pinkOvalColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_smoll_yellow_image_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/yellowOvalColor"
+            android:contentDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <ImageView
+            android:id="@+id/oval_big_yellow_image_view"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="520dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/yellowOvalColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
             android:id="@+id/separator_image_view"
             android:layout_width="410dp"
             android:layout_height="109dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="0dp"
             android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/box_top"
@@ -33,7 +86,6 @@
             android:background="@drawable/box_bottom"
             android:backgroundTint="@color/white"
             android:contentDescription="@string/todo"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/separator_image_view"
@@ -46,12 +98,9 @@
             android:background="@drawable/circulo"
             android:backgroundTint="@color/toolBarLogin"
             android:contentDescription="@string/todo"
-            app:layout_constraintBottom_toBottomOf="@+id/container_image_view"
             app:layout_constraintEnd_toEndOf="@+id/container_image_view"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="@+id/container_image_view"
             app:layout_constraintTop_toBottomOf="@+id/separator_image_view"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/circulo"
             tools:ignore="ImageContrastCheck" />
 

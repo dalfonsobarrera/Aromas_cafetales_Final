@@ -9,8 +9,60 @@ android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/textura"
+        android:theme="@style/AppTheme.styleProduct"
         tools:context=".ui.newproduct.NewProductFragment">
+
+        <ImageView
+            android:id="@+id/oval_pink_image_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="361dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/pinkOvalColor"
+            app:layout_constraintStart_toStartOf="@+id/container_new_product_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/save_product_button"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_yellow_image_view"
+            android:layout_width="265dp"
+            android:layout_height="265dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/yellowOvalColor"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/oval_blue_image_view"
+            android:layout_width="458dp"
+            android:layout_height="458dp"
+            android:layout_marginTop="256dp"
+            android:layout_marginEnd="108dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/blueOvalColor"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_purple_image_view"
+            android:layout_width="254dp"
+            android:layout_height="254dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="224dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/purpleOvalColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
 
         <ImageView
             android:id="@+id/separator_new_product_image_view"
@@ -27,11 +79,9 @@ android:layout_height="wrap_content">
             android:layout_width="0dp"
             android:layout_height="419dp"
             android:layout_marginTop="75dp"
-            android:layout_marginBottom="125dp"
             android:background="@drawable/box_bottom"
             android:backgroundTint="@color/white"
             android:contentDescription="@string/todo"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/separator_new_product_image_view"
@@ -42,7 +92,7 @@ android:layout_height="wrap_content">
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:background="@drawable/circulo"
-            android:backgroundTint="@color/toolBarGeneral"
+            android:backgroundTint="@color/toolBarProduct"
             android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -141,6 +191,7 @@ android:layout_height="wrap_content">
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/resume_product_text_input_layout" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
