@@ -21,45 +21,36 @@
         <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales2/app/src/main/res/layout/fragment_register_user.xml" value="0.22355769230769232" />
         <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales2/app/src/main/res/layout/fragment_splash_ac.xml" value="0.25" />
         <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales2/app/src/main/res/layout/fragment_splash_ar.xml" value="0.3625" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/drawable/ic_cart.xml" value="0.2805" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/activity_bottom.xml" value="0.262037037037037" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/activity_main.xml" value="0.22239583333333332" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/card_view_item_product.xml" value="0.26145833333333335" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/card_view_user_register.xml" value="0.29791666666666666" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_detail_product.xml" value="0.3625" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_list_products.xml" value="0.262037037037037" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_login_user.xml" value="0.3625" />
-        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_register_user.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_new_product.xml" value="0.25" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_register_user.xml" value="0.33" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_shoping.xml" value="0.1969309462915601" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_splash_ac.xml" value="0.262037037037037" />
-        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/menu/bottom_nav_menu.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/menu/overflow_menu.xml" value="0.25" />
         <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_register.xml" value="0.3625" />
         <entry key="..\:/Users/dabb-/StudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
-        <entry key="app/src/main/res/drawable/box_bottom.xml" value="0.3515" />
-        <entry key="app/src/main/res/drawable/box_top.xml" value="0.3515" />
-        <entry key="app/src/main/res/drawable/button_corners.xml" value="0.3575" />
-        <entry key="app/src/main/res/drawable/circulo.xml" value="0.3515" />
-        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.3575" />
-        <entry key="app/src/main/res/layout/activity_bottom.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/card_view_item_product.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/card_view_item_product.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/card_view_user_register.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_delete_product.xml" value="0.43297587131367293" />
+        <entry key="app/src/main/res/layout/fragment_delete_product.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_detail_product.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_detail_register.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_list_products.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_list_register.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_login_user.xml" value="0.43297587131367293" />
+        <entry key="app/src/main/res/layout/fragment_login_user.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_product.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_register_user.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_shoping.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_splash_ac.xml" value="0.35625" />
-        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35625" />
-        <entry key="app/src/main/res/menu/overflow_menu.xml" value="0.35625" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_1.xml" value="0.3575" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3575" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3575" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_product.xml" value="0.3575" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_product_round.xml" value="0.3575" />
+        <entry key="app/src/main/res/layout/fragment_register_user.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -68,12 +59,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.43297587131367293" />
-      </ProjectState>
-    </option>
   </component>
 </project>

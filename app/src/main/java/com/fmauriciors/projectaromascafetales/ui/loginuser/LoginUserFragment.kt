@@ -34,14 +34,14 @@ class LoginUserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loginUserViewModel.msgDone.observe(viewLifecycleOwner,{ result ->
+        loginUserViewModel.msgDone.observe(viewLifecycleOwner) { result ->
             onMsgDoneSubscribe(result)
-        })
-        loginUserViewModel.dataValidated.observe(viewLifecycleOwner, { result ->
+        }
+        loginUserViewModel.dataValidated.observe(viewLifecycleOwner) { result ->
             onDataValidatedSubscribe(result)
-        })
+        }
         with(loginUserBinding) {
-            signUserButton.setOnClickListener {
+            signInButton.setOnClickListener {
                 loginUserViewModel.validateFields(
                     emailLoginEditText.text.toString(),
                     passwordLoginEditText.text.toString()

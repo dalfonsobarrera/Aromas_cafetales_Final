@@ -166,7 +166,7 @@
             app:layout_constraintTop_toBottomOf="@+id/oval_user_background_image_view">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/TextInputEmailLoginEditText"
+                android:id="@+id/email_login_edit_text"
                 style="@style/FontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -189,7 +189,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputEmailLoginLayout">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/TextInputPasswordLoginEditText"
+                android:id="@+id/password_login_edit_text"
                 style="@style/FontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
