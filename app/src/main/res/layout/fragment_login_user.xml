@@ -13,26 +13,119 @@
         tools:context=".ui.loginuser.LoginUserFragment">
 
         <ImageView
-            android:id="@+id/logo_image_view"
-            android:layout_width="248dp"
-            android:layout_height="182dp"
-            android:layout_marginTop="84dp"
+            android:id="@+id/oval_big_blue_image_view"
+            android:layout_width="305dp"
+            android:layout_height="301dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="28dp"
             android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/purpleOvalColor"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_big_pink_image_view"
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:layout_marginTop="124dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/pinkOvalColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_smoll_yellow_image_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/yellowOvalColor"
+            android:contentDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <ImageView
+            android:id="@+id/oval_big_yellow_image_view"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="520dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/yellowOvalColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/separator_image_view"
+            android:layout_width="410dp"
+            android:layout_height="109dp"
+            android:layout_marginTop="0dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/box_top"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/container_image_view"
+            android:layout_width="0dp"
+            android:layout_height="439dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/box_bottom"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator_image_view"
+            app:srcCompat="@drawable/box_bottom" />
+
+        <ImageView
+            android:id="@+id/oval_user_background_image_view"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/toolBarLogin"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="@+id/container_image_view"
+            app:layout_constraintStart_toStartOf="@+id/container_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/separator_image_view"
+            app:srcCompat="@drawable/circulo"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="154dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/oval_user_background_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/oval_user_background_image_view"
+            app:layout_constraintStart_toStartOf="@+id/oval_user_background_image_view"
+            app:layout_constraintTop_toTopOf="@+id/oval_user_background_image_view"
             app:srcCompat="@drawable/user"
             tools:ignore="ImageContrastCheck" />
 
         <Button
-            android:id="@+id/sign_user_button"
+            android:id="@+id/sign_in_button"
+            style="@style/FontStyleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/toolBarLogin"
+            android:background="@drawable/button_corners"
+            android:fontFamily="@font/zeyada"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -40,61 +133,67 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_login_text_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/textInputPasswordLoginLayout"
             tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/register_text_view"
+            style="@style/FontStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/zeyada"
             android:text="@string/do_not_have_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_user_button"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
             tools:ignore="TextContrastCheck" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_login_text_input_layout"
+            android:id="@+id/textInputEmailLoginLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="300dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/oval_user_background_image_view">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email_Login_edit_text"
+                android:id="@+id/TextInputEmailLoginEditText"
+                style="@style/FontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zeyada"
                 android:hint="@string/email_login_user"
                 tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password_login_text_input_layout"
+            android:id="@+id/textInputPasswordLoginLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_login_text_input_layout">
+            app:layout_constraintTop_toBottomOf="@+id/textInputEmailLoginLayout">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_login_edit_text"
+                android:id="@+id/TextInputPasswordLoginEditText"
+                style="@style/FontStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zeyada"
                 android:hint="@string/password_login_user"
                 tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>

@@ -34,6 +34,7 @@ class RegisterUserFragment : Fragment() {
     ): View {
         registerUserBinding = FragmentRegisterUserBinding.inflate(inflater, container, false)
         registerUserViewModel = ViewModelProvider(this)[RegisterUserViewModel::class.java]
+        context?.theme?.applyStyle(R.style.AppTheme_styleRegister, true)
         return registerUserBinding.root
     }
 

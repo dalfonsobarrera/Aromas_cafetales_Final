@@ -3,58 +3,75 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        app:cardCornerRadius="12dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:cardMaxElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/violet">
+            android:background="@color/statusBarGeneral">
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="100dp"
-                android:layout_height="85dp"
-                android:layout_marginStart="16dp"
+                android:id="@+id/circle_background_image_view"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circulo"
+                android:backgroundTint="@color/white75"
                 android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.516"
-                app:srcCompat="@drawable/user" />
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/circulo" />
+
+            <ImageView
+                android:id="@+id/user_user_image_view"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="17dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/circle_background_image_view"
+                app:layout_constraintStart_toStartOf="@+id/circle_background_image_view"
+                app:layout_constraintTop_toTopOf="@+id/circle_background_image_view"
+                app:srcCompat="@drawable/user"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/name_card_name_register_text_view"
-                style="@style/TextViewTitle"
+                style="@style/FontStyle.Title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/name_register"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/circle_background_image_view"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/name_card_phone_register_text_view"
-                style="@style/TextViewSubTitle"
+                style="@style/FontStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="@string/name_phone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/circle_background_image_view"
                 app:layout_constraintTop_toBottomOf="@+id/name_card_name_register_text_view"
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="TextContrastCheck" />

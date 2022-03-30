@@ -4,31 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:theme="@style/AppTheme.styleRegister">
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/FontStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.styleRegister"
         tools:context=".ui.registeruser.RegisterUserFragment">
+
+        <ImageView
+            android:id="@+id/oval_med_purple_image_view"
+            android:layout_width="332dp"
+            android:layout_height="332dp"
+            android:layout_marginEnd="192dp"
+            android:layout_marginBottom="7dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/purpleOvalColor"
+            app:layout_constraintBottom_toTopOf="@+id/name_register_text_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_med_pink_image_view"
+            android:layout_width="223dp"
+            android:layout_height="223dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/pinkOvalColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_med_blue_image_view"
+            android:layout_width="222dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="188dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/blueOvalColor"
+            android:contentDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_register_text_input_layout"
+            app:srcCompat="@drawable/circulo"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/separator_register_image_view"
+            android:layout_width="413dp"
+            android:layout_height="31dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/box_bottom"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/container_register_image_view"
+            android:layout_width="0dp"
+            android:layout_height="600dp"
+            android:layout_marginTop="82dp"
+            android:background="@drawable/box_bottom"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator_register_image_view"
+            app:srcCompat="@drawable/box_bottom"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/oval_register_background_image_view"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/toolBarRegister"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator_register_image_view"
+            app:srcCompat="@drawable/circulo" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name_register_text_input_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_View_register">
+            app:layout_constraintEnd_toEndOf="@+id/container_register_image_view"
+            app:layout_constraintStart_toStartOf="@+id/container_register_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/oval_register_background_image_view">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_register_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="48dp"
                 android:hint="@string/name_register_user"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
@@ -38,7 +118,7 @@
             android:id="@+id/password_register_text_input_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -59,13 +139,13 @@
             android:id="@+id/phone_register_text_input_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/container_register_image_view"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/container_register_image_view"
             app:layout_constraintTop_toBottomOf="@+id/name_register_text_input_layout">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -80,12 +160,11 @@
             android:id="@+id/email_register_text_input_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phone_register_text_input_layout">
 
@@ -101,7 +180,7 @@
             android:id="@+id/repassword_register_text_input_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -121,32 +200,33 @@
 
         <Button
             android:id="@+id/register_user_button"
+            style="@style/FontStyleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:layout_weight="1"
+            android:background="@drawable/button_corners"
             android:text="@string/register_user_button"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/black60"
+            app:layout_constraintBottom_toBottomOf="@+id/container_register_image_view"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/repassword_register_text_input_layout"
-            app:layout_constraintVertical_bias="1.0"
             tools:ignore="TextContrastCheck" />
 
         <ImageView
             android:id="@+id/image_View_register"
-            android:layout_width="307dp"
-            android:layout_height="167dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/papiro"
+            android:layout_width="166dp"
+            android:layout_height="105dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/oval_register_background_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/oval_register_background_image_view"
+            app:layout_constraintStart_toStartOf="@+id/oval_register_background_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/separator_register_image_view"
+            app:srcCompat="@drawable/user"
             tools:ignore="ImageContrastCheck" />
 
 

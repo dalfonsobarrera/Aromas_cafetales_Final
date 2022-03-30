@@ -9,21 +9,106 @@ android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.styleGeneral"
+        android:theme="@style/AppTheme.styleProduct"
         tools:context=".ui.newproduct.NewProductFragment">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="234dp"
-            android:layout_height="181dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="64dp"
+            android:id="@+id/oval_pink_image_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="361dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/pinkOvalColor"
+            app:layout_constraintStart_toStartOf="@+id/container_new_product_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/save_product_button"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_yellow_image_view"
+            android:layout_width="265dp"
+            android:layout_height="265dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/yellowOvalColor"
             android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/oval_blue_image_view"
+            android:layout_width="458dp"
+            android:layout_height="458dp"
+            android:layout_marginTop="256dp"
+            android:layout_marginEnd="108dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/blueOvalColor"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/oval_purple_image_view"
+            android:layout_width="254dp"
+            android:layout_height="254dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="224dp"
+            android:contentDescription="@string/todo"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/purpleOvalColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/separator_new_product_image_view"
+            android:layout_width="428dp"
+            android:layout_height="114dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_1" />
+            app:srcCompat="@drawable/box_top" />
+
+        <ImageView
+            android:id="@+id/container_new_product_image_view"
+            android:layout_width="0dp"
+            android:layout_height="419dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/box_bottom"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator_new_product_image_view"
+            app:srcCompat="@drawable/box_bottom" />
+
+        <ImageView
+            android:id="@+id/oval_new_product_image_View"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/circulo"
+            android:backgroundTint="@color/toolBarProduct"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator_new_product_image_view"
+            app:srcCompat="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="@+id/oval_new_product_image_View"
+            app:layout_constraintEnd_toEndOf="@+id/oval_new_product_image_View"
+            app:layout_constraintStart_toStartOf="@+id/oval_new_product_image_View"
+            app:layout_constraintTop_toBottomOf="@+id/separator_new_product_image_view"
+            app:srcCompat="@drawable/sologlobos" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name_text_input_layout"
@@ -44,7 +129,8 @@ android:layout_height="wrap_content">
                 android:layout_height="wrap_content"
                 android:hint="@string/product_name"
                 android:inputType="textPersonName"
-                android:textColorHint="#757575" />
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -87,23 +173,25 @@ android:layout_height="wrap_content">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/resume_plantation"
-                android:textColorHint="#757575" />
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/save_product_button"
+            style="@style/FontStyleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
+            android:background="@drawable/button_corners"
             android:text="@string/save_product"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/resume_product_text_input_layout" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
