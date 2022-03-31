@@ -43,8 +43,8 @@
             android:id="@+id/oval_med_blue_image_view"
             android:layout_width="222dp"
             android:layout_height="200dp"
-            android:layout_marginStart="188dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/circulo"
             android:backgroundTint="@color/blueOvalColor"
             android:contentDescription="@string/todo"
@@ -67,8 +67,8 @@
 
         <ImageView
             android:id="@+id/container_register_image_view"
-            android:layout_width="0dp"
-            android:layout_height="600dp"
+            android:layout_width="413dp"
+            android:layout_height="606dp"
             android:layout_marginTop="82dp"
             android:background="@drawable/box_bottom"
             android:backgroundTint="@color/white"
@@ -120,7 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -141,7 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="@+id/container_register_image_view"
             app:layout_constraintHorizontal_bias="0.0"
@@ -162,7 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -182,7 +182,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -203,18 +203,20 @@
             style="@style/FontStyleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="4dp"
             android:layout_weight="1"
             android:background="@drawable/button_corners"
             android:text="@string/register_user_button"
             android:textColor="@color/black60"
             app:layout_constraintBottom_toBottomOf="@+id/container_register_image_view"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/repassword_register_text_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/roll_buyer_switch"
+            app:layout_constraintVertical_bias="0.224"
             tools:ignore="TextContrastCheck" />
 
         <ImageView
@@ -228,6 +230,29 @@
             app:layout_constraintTop_toBottomOf="@+id/separator_register_image_view"
             app:srcCompat="@drawable/user"
             tools:ignore="ImageContrastCheck" />
+
+        <Switch
+            android:id="@+id/roll_buyer_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            android:text="@string/rollComprador"
+            app:layout_constraintStart_toStartOf="@+id/repassword_register_text_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/repassword_register_text_input_layout" />
+
+        <Switch
+            android:id="@+id/roll_seller_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:minHeight="48dp"
+            android:text="@string/rollVendedor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toEndOf="@+id/roll_buyer_switch"
+            app:layout_constraintTop_toBottomOf="@+id/repassword_register_text_input_layout" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

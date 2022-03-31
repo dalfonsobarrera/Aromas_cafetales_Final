@@ -24,7 +24,7 @@
             >
 
             <ImageView
-                android:id="@+id/picture_product_image_view"
+                android:id="@+id/favorite_product_image_view"
                 android:layout_width="115dp"
                 android:layout_height="115dp"
                 android:layout_marginStart="8dp"
@@ -36,35 +36,35 @@
                 app:srcCompat="@mipmap/ic_product_carview_foreground" />
 
             <TextView
-                android:id="@+id/name_card_product_text_view"
+                android:id="@+id/favorite_name_product_text_view"
                 style="@style/TextViewTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/example_brand"
-                android:textColor="@color/white"
+                android:textColor="@color/black60"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/picture_product_image_view"
-                app:layout_constraintTop_toTopOf="@+id/picture_product_image_view"
+                app:layout_constraintStart_toEndOf="@+id/favorite_product_image_view"
+                app:layout_constraintTop_toTopOf="@+id/favorite_product_image_view"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
-                android:id="@+id/name_card_costo_text_view"
+                android:id="@+id/favorite_name_costo_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/zeyada"
                 android:text="@string/cost"
-                android:textColor="@color/white"
+                android:textColor="@color/black60"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/picture_product_image_view"
-                app:layout_constraintTop_toBottomOf="@+id/name_card_product_text_view"
+                app:layout_constraintStart_toEndOf="@+id/favorite_product_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/favorite_name_product_text_view"
                 tools:ignore="MissingConstraints,TextContrastCheck" />
 
             <RatingBar
-                android:id="@+id/ratingBar_popularity"
+                android:id="@+id/favorite_ratingBar_popularity"
                 android:layout_width="241dp"
                 android:layout_height="61dp"
                 android:layout_marginStart="4dp"
@@ -72,8 +72,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/picture_product_image_view"
-                app:layout_constraintTop_toBottomOf="@+id/name_card_costo_text_view"
+                app:layout_constraintStart_toEndOf="@+id/favorite_product_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/favorite_name_costo_text_view"
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="SpeakableTextPresentCheck" />
 

@@ -48,7 +48,9 @@
     <string name="name_user">Example_user</string>
     <string name="name_phone">example_phone</string>
     <string name="todo">TODO</string>
-
+    <string name="rollComprador">comprador</string>
+    <string name="rollVendedor">Vendedor</string>
+    <string name="rollVendedor">Vendedor</string>
 
 
 </resources>
