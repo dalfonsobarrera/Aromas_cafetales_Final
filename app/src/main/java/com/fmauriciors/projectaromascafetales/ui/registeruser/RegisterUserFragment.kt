@@ -41,12 +41,12 @@ class RegisterUserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        registerUserViewModel.msgDone.observe(viewLifecycleOwner,{ result ->
+        registerUserViewModel.msgDone.observe(viewLifecycleOwner) { result ->
             onMsgDoneSubscribe(result)
-        })
-        registerUserViewModel.dataValidated.observe(viewLifecycleOwner, { result ->
+        }
+        registerUserViewModel.dataValidated.observe(viewLifecycleOwner) { result ->
             onDataValidatedSubscribe(result)
-        })
+        }
 
         with(registerUserBinding) {
 

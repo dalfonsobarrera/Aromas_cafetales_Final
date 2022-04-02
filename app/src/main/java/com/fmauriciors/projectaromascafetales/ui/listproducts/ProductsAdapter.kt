@@ -7,10 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.CardViewItemProductBinding
 import com.fmauriciors.projectaromascafetales.local.Product
+import com.fmauriciors.projectaromascafetales.server.ProductServer
 import java.util.ArrayList
 
 class ProductsAdapter (
-    private val productsList: ArrayList <Product>
+    private val productsList: ArrayList <ProductServer>
 
     ): RecyclerView.Adapter<ProductsAdapter.ProductViewHolder>(){
 
@@ -28,7 +29,7 @@ class ProductsAdapter (
 
         override fun getItemCount(): Int = productsList.size
 
-        fun appendItems(newList: ArrayList<Product>) {
+        fun appendItems(newList: ArrayList<ProductServer>) {
             productsList.clear()
             productsList.addAll(newList)
             notifyDataSetChanged()
@@ -36,10 +37,10 @@ class ProductsAdapter (
 
         class ProductViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
             private val binding = CardViewItemProductBinding.bind(itemView)
-            fun bind(product: Product) {
+            fun bind(product: ProductServer) {
                 with(binding){
-                    nameCardProductTextView.text = product.nameProduct
-                    nameCardCostoTextView.text = product.cost
+                    favoriteNameProductTextView.text = product.nameProduct
+                    favoriteNameCostoTextView.text = product.cost
                    // nameCardResumeTextView.text = product.resumePlantation
 
                 }

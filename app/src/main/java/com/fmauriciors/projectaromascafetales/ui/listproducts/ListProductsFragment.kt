@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fmauriciors.projectaromascafetales.databinding.FragmentListProductsBinding
 import com.fmauriciors.projectaromascafetales.local.Product
+import com.fmauriciors.projectaromascafetales.server.ProductServer
 
 class ListProductsFragment : Fragment() {
 
@@ -18,7 +19,8 @@ class ListProductsFragment : Fragment() {
     private lateinit var listProductsBinding: FragmentListProductsBinding
     private lateinit var listProductsViewModel: ListProductsViewModel
     private lateinit var productsAdapter: ProductsAdapter
-    private var productsList: ArrayList<Product> = ArrayList()
+    private var productsList: ArrayList<Product> = ArrayList()   //room
+    private var productsListFromServer: ArrayList<ProductServer> = ArrayList()    //firebase
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,11 +37,13 @@ class ListProductsFragment : Fragment() {
         listProductsViewModel.loadProductDone.observe(viewLifecycleOwner) { result ->
             onLoadProductsDoneSubscribe(result)
         }
-
+        listProductsViewModel.loadProductsFromServerDone.observe(viewLifecycleOwner) { result ->
+            onLoadProductsFromServerDoneSubscribe(result)
+        }
         //listProductsViewModel.loadProducts()
         listProductsViewModel.loadProductsFromServer()
 
-        productsAdapter = ProductsAdapter(productsList)
+        productsAdapter = ProductsAdapter(productsListFromServer)
 
         listProductsBinding.productsRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@ListProductsFragment.requireContext())
@@ -55,9 +59,14 @@ class ListProductsFragment : Fragment() {
 
     }
 
-    private fun onLoadProductsDoneSubscribe(productsListLoaded: ArrayList<Product>) {
+    private fun onLoadProductsFromServerDoneSubscribe(productsListFromServerLoaded: ArrayList<ProductServer>) { // Firebase
+        productsListFromServer = productsListFromServerLoaded
+        productsAdapter.appendItems(productsListFromServer)
+    }
+
+    private fun onLoadProductsDoneSubscribe(productsListLoaded: ArrayList<Product>) {            //Room
         productsList = productsListLoaded
-        productsAdapter.appendItems(productsList)
+        //productsAdapter.appendItems(productsList)
         Log.d("Hello","data")
 
     }

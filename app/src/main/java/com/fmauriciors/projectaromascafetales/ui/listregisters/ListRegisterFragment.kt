@@ -29,9 +29,9 @@ class ListRegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        listRegistersViewModel.loadRegisterDone.observe(viewLifecycleOwner, { result ->
+        listRegistersViewModel.loadRegisterDone.observe(viewLifecycleOwner) { result ->
             onLoadRegistersDoneSubscribe(result)
-        })
+        }
 
         listRegistersViewModel.loadRegisters()
 

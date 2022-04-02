@@ -74,7 +74,6 @@ class LoginUserFragment : Fragment() {
                     }
             }
         }
-
     private fun onMsgDoneSubscribe(msg: String?) {
         Toast.makeText(
             requireContext(),

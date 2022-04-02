@@ -77,12 +77,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun goToLogin() {
+    /*private fun goToLogin() {
         // findNavController.navigate(R.id.nav_host_fragment_activity_bottom)
-        /*val intent = Intent(this, LoginUserFragment::class.java)
+        val intent = Intent(this, LoginUserFragment::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)*/
-    }
+        startActivity(intent)
+    }*/
 
 
 }

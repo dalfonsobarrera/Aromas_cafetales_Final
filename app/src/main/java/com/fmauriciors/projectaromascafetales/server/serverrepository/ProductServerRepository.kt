@@ -29,28 +29,11 @@ class ProductServerRepository {
 
     }
 
-    /*fun searchProduct(nameProduct: String) :  ProductServer? {
-        var productServerFound : ProductServer? = null
-        db.collection("products")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result){
-                    val productServer : ProductServer = document.toObject<ProductServer>()
-                    if (nameProduct == productServer?.nameProduct) {
-                         productServerFound = productServer
-
-                    }
-                }
-            }
-        return productServerFound
-    }*/
-
     suspend fun loadproducts(): QuerySnapshot {
         return withContext(Dispatchers.IO) {
             db.collection("products").get().await()
         }
     }
-
     fun deleteProduct(product: ProductServer) {
        product.id?.let {   id ->
            db.collection("products")
@@ -58,4 +41,6 @@ class ProductServerRepository {
            .delete()
        }
     }
+
+
 }
