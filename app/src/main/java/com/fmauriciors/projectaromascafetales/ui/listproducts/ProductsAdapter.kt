@@ -1,5 +1,6 @@
 package com.fmauriciors.projectaromascafetales.ui.listproducts
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +12,8 @@ import com.fmauriciors.projectaromascafetales.server.ProductServer
 import java.util.ArrayList
 
 class ProductsAdapter (
-    private val productsList: ArrayList <ProductServer>
-
+    private val productsList: ArrayList <ProductServer>,
+    private val onItemClicked: (ProductServer) -> Unit
     ): RecyclerView.Adapter<ProductsAdapter.ProductViewHolder>(){
 
 
@@ -25,6 +26,8 @@ class ProductsAdapter (
         override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
             val product = productsList[position]
             holder.bind(product)
+            holder.itemView.setOnClickListener { onItemClicked(productsList[position])
+            }
         }
 
         override fun getItemCount(): Int = productsList.size
@@ -42,7 +45,10 @@ class ProductsAdapter (
                     favoriteNameProductTextView.text = product.nameProduct
                     favoriteNameCostoTextView.text = product.cost
                    // nameCardResumeTextView.text = product.resumePlantation
-
+                    //Picasso.get().load(book.urlPicture).into(pictureBookImageView)
+                }
+                itemView.setOnClickListener {
+                    Log.d ("ClicAdapter","en Iten")
                 }
             }
         }

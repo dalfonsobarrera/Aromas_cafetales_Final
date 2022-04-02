@@ -43,7 +43,8 @@ class ListProductsFragment : Fragment() {
         //listProductsViewModel.loadProducts()
         listProductsViewModel.loadProductsFromServer()
 
-        productsAdapter = ProductsAdapter(productsListFromServer)
+        productsAdapter = ProductsAdapter(productsListFromServer, onItemClicked = {
+            onProductItemClicked(it)})
 
         listProductsBinding.productsRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@ListProductsFragment.requireContext())
@@ -56,6 +57,12 @@ class ListProductsFragment : Fragment() {
         listProductsBinding.searchProductButton.setOnClickListener {
             findNavController().navigate(ListProductsFragmentDirections.actionListProductsFragmentToDeleteProductFragment())
         }
+
+    }
+
+    private fun onProductItemClicked(product: ProductServer) {
+        findNavController().navigate(ListProductsFragmentDirections.actionListProductsFragmentToDetailProductFragment(product))
+       // product.nameProduct?.let {Log.d("ClicproductView", it)}
 
     }
 

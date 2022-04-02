@@ -1,5 +1,6 @@
 package com.fmauriciors.projectaromascafetales.server
 
+import java.io.Serializable
 
 
 data class ProductServer(
@@ -7,4 +8,4 @@ data class ProductServer(
   var nameProduct: String? = null,
   var cost: String?= null,
   var resumePlantation: String? = null
-)
+): Serializable

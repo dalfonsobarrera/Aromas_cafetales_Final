@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_listProductsFragment_to_mainActivity"
             app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_listProductsFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
     </fragment>
     <fragment
         android:id="@+id/newProductFragment"
@@ -71,7 +74,7 @@
         tools:layout="@layout/fragment_detail_product" >
         <argument
             android:name="product"
-            app:argType="com.fmauriciors.projectaromascafetales.local.Product" />
+            app:argType="com.fmauriciors.projectaromascafetales.server.ProductServer" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
