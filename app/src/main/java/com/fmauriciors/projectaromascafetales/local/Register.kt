@@ -12,5 +12,8 @@ data class Register(
     @ColumnInfo(name="nameUser") var nameUser: String = "",
     @ColumnInfo(name="phone") var phone: String = "",
     @ColumnInfo(name="email") var email: String = "",
-    @ColumnInfo(name="password") var password: String = ""
+    @ColumnInfo(name="password") var password: String = "",
+    @ColumnInfo(name="role1") var role1: Boolean = false,
+    @ColumnInfo(name="role2") var role2: Boolean = false
+
 ): Serializable

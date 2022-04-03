@@ -1,17 +1,11 @@
 package com.fmauriciors.projectaromascafetales.ui.registeruser
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import android.util.Patterns
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.fmauriciors.projectaromascafetales.databinding.FragmentRegisterUserBinding
 import com.fmauriciors.projectaromascafetales.local.repositorybd.RegisterRepository
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -29,37 +23,35 @@ class RegisterUserViewModel : ViewModel() {
         val dataValidated: LiveData<Boolean> = dataValidate
 
 
-        fun validateFields(nameRegister: String, phone: String, emailRegister: String, passwordRegister: String, repasswordRegister: String) {
-            if (nameRegister.isEmpty() ||
-                phone.isEmpty() ||
-                emailRegister.isEmpty() ||
-                passwordRegister.isEmpty() ||
-                repasswordRegister.isEmpty()
-            ) {
-                msg.value = "Verifique que los campos no esten vacios"
+        fun validateFields(nameRegister: String, phone: String, emailRegister: String, passwordRegister: String, repasswordRegister: String, role1: Boolean, role2: Boolean) {
+            if (nameRegister.isEmpty() || phone.isEmpty() || emailRegister.isEmpty() || passwordRegister.isEmpty() || repasswordRegister.isEmpty()){
+                    msg.value = "Verifique que los campos no estén vacios"
             } else {
                 if (!Patterns.EMAIL_ADDRESS.matcher(emailRegister).matches()) {
-                    msg.value = "Debe digitar el email correctamente"
+                        msg.value = "Debe digitar el email correctamente"
                 } else {
                     if (passwordRegister.length < 6) {
                         msg.value = "La contraseña debe ser mayor a 6 caracteres"
                     } else {
                         if (passwordRegister.equals(repasswordRegister)) {
+                            //msg.value = "Las contraseñas coincide"
+                            if (role1 == false && role2 == false) {
+                                msg.value = "Seleccione comprador, vendedor o ambos"
+                            } else {
+                                dataValidate.value = true
+                            }
+                        } else {
                             msg.value = "Las contraseñas no coinciden"
                         }
-                        dataValidate.value = true
                     }
-
                 }
-
             }
-
         }
-    fun saveRegister(nameUser: String, phone: String, email: String, password: String) {
+
+    fun saveRegister(nameUser: String, phone: String, email: String, password: String, role1: Boolean, role2: Boolean) {
         GlobalScope.launch(Dispatchers.IO) {
-            registerRepository.saveRegister(nameUser, phone, email, password)
+            registerRepository.saveRegister(nameUser, phone, email, password, role1, role2)
         }
-
     }
 }
 /*

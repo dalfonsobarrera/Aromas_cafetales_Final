@@ -6,6 +6,8 @@
         <entry key="..\:/Users/Desarrollo/Documents/GitHub/ProjectAromasCafetales/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Desarrollo/Documents/GitHub/ProjectAromasCafetales/app/src/main/res/menu/menu.xml" value="0.49122807017543857" />
         <entry key="..\:/Users/Desarrollo/Documents/GitHub/ProjectAromasCafetales/app/src/main/res/menu/menu_overflow.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/card_view_user_register.xml" value="0.25" />
+        <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_register_user.xml" value="0.25" />
         <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_login.xml" value="0.22870370370370371" />
         <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_main.xml" value="0.22870370370370371" />
         <entry key="..\:/Users/MauricioRios/AndroidStudioProjects/ProjectAromasCafetales/app/src/main/res/layout/activity_register.xml" value="0.12962962962962962" />
@@ -29,7 +31,7 @@
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_detail_product.xml" value="0.3625" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_list_products.xml" value="0.262037037037037" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_login_user.xml" value="0.3625" />
-        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_new_product.xml" value="0.33" />
+        <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_new_product.xml" value="0.25" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_register_user.xml" value="0.33" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_shoping.xml" value="0.1969309462915601" />
         <entry key="..\:/Users/dabb-/StudioProjects/Aromas_cafetales_Final/app/src/main/res/layout/fragment_splash_ac.xml" value="0.262037037037037" />
@@ -50,7 +52,7 @@
         <entry key="app/src/main/res/layout/fragment_list_register.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_login_user.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_product.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_register_user.xml" value="0.3147410358565737" />
+        <entry key="app/src/main/res/layout/fragment_register_user.xml" value="0.1" />
       </map>
     </option>
   </component>

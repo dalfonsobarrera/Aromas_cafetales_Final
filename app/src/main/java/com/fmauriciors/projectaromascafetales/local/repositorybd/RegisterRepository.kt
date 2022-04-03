@@ -11,7 +11,9 @@ class RegisterRepository {
         nameUser: String,
         phone: String,
         email: String,
-        password: String
+        password: String,
+        role1: Boolean,
+        role2: Boolean
 
     ) {
         val register = Register(
@@ -20,7 +22,9 @@ class RegisterRepository {
             nameUser = nameUser,
             phone = phone,
             email = email,
-            password = password
+            password = password,
+            role1 = role1,
+            role2 = role2
         )
 
         val registerDao : RegisterDao = AromasCafetalesProyect.database.RegisterDao()

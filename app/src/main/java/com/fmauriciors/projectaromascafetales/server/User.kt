@@ -5,7 +5,8 @@ data class User(
     var nombre: String? = null,
     var phone: String? = null,
     var email: String? = null,
-    var role: Role? = null
+    var role1: Boolean? = null,
+    var role2: Boolean? = null
 )
 enum class Role {
     COMPRADOR,VENDEDOR,AMBOS
