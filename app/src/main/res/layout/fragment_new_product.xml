@@ -16,27 +16,12 @@ android:layout_height="wrap_content">
             android:id="@+id/oval_pink_image_view"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="361dp"
-            android:contentDescription="@string/todo"
             android:background="@drawable/circulo"
             android:backgroundTint="@color/pinkOvalColor"
-            app:layout_constraintStart_toStartOf="@+id/container_new_product_image_view"
-            app:layout_constraintTop_toBottomOf="@+id/save_product_button"
-            app:srcCompat="@drawable/circulo" />
-
-        <ImageView
-            android:id="@+id/oval_yellow_image_view"
-            android:layout_width="265dp"
-            android:layout_height="265dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/circulo"
-            android:backgroundTint="@color/yellowOvalColor"
             android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_product_button"
             app:srcCompat="@drawable/circulo"
-            tools:ignore="ImageContrastCheck" />
+            tools:layout_editor_absoluteX="361dp" />
 
         <ImageView
             android:id="@+id/oval_blue_image_view"
@@ -65,29 +50,6 @@ android:layout_height="wrap_content">
             app:srcCompat="@drawable/circulo" />
 
         <ImageView
-            android:id="@+id/separator_new_product_image_view"
-            android:layout_width="428dp"
-            android:layout_height="114dp"
-            android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/box_top" />
-
-        <ImageView
-            android:id="@+id/container_new_product_image_view"
-            android:layout_width="0dp"
-            android:layout_height="419dp"
-            android:layout_marginTop="75dp"
-            android:background="@drawable/box_bottom"
-            android:backgroundTint="@color/white"
-            android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/separator_new_product_image_view"
-            app:srcCompat="@drawable/box_bottom" />
-
-        <ImageView
             android:id="@+id/oval_new_product_image_View"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -96,8 +58,8 @@ android:layout_height="wrap_content">
             android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/separator_new_product_image_view"
-            app:srcCompat="@drawable/circulo" />
+            app:srcCompat="@drawable/circulo"
+            tools:layout_editor_absoluteY="114dp" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -107,7 +69,6 @@ android:layout_height="wrap_content">
             app:layout_constraintBottom_toBottomOf="@+id/oval_new_product_image_View"
             app:layout_constraintEnd_toEndOf="@+id/oval_new_product_image_View"
             app:layout_constraintStart_toStartOf="@+id/oval_new_product_image_View"
-            app:layout_constraintTop_toBottomOf="@+id/separator_new_product_image_view"
             app:srcCompat="@drawable/sologlobos" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -191,6 +152,18 @@ android:layout_height="wrap_content">
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/resume_product_text_input_layout" />
+
+        <ImageView
+            android:id="@+id/photo_image_view"
+            android:layout_width="57dp"
+            android:layout_height="55dp"
+            app:layout_constraintBottom_toTopOf="@+id/name_text_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.78"
+            app:layout_constraintStart_toEndOf="@+id/oval_new_product_image_View"
+            app:layout_constraintTop_toBottomOf="@+id/oval_new_product_image_View"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_camera" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

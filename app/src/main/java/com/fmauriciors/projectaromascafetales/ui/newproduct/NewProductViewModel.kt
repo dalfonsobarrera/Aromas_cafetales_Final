@@ -21,7 +21,9 @@ class NewProductViewModel : ViewModel() {
     val dataValidated: LiveData<Boolean> = dataValidate
     fun validateFields(nameProduct: String, cost: String, resumePlantation: String) {
 
-        if(nameProduct.isEmpty() || cost.isEmpty() ||  resumePlantation.isEmpty()){
+        if(nameProduct.isEmpty() ||
+            cost.isEmpty() ||
+            resumePlantation.isEmpty()){
             msg.value = "Debe digitar nombre, precio, nombre de la finca y realizar una breve descripcion"
         }else{
             dataValidate.value = true

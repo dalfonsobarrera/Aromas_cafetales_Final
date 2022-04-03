@@ -53,7 +53,7 @@ class LoginUserFragment : Fragment() {
         }
     }
 
-    private fun onDataValidatedSubscribe(result: Boolean?) {
+    private fun onDataValidatedSubscribe(email: Boolean?) {
         auth = Firebase.auth
 
         with(loginUserBinding){
@@ -73,7 +73,8 @@ class LoginUserFragment : Fragment() {
                         }
                     }
             }
-        }
+
+    }
     private fun onMsgDoneSubscribe(msg: String?) {
         Toast.makeText(
             requireContext(),

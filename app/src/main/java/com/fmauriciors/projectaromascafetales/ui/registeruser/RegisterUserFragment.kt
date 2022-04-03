@@ -85,12 +85,6 @@ class RegisterUserFragment : Fragment() {
 
                         createUser(auth.currentUser?.uid, email)
 
-                    } else {
-                        Log.w("Register full", "createUserWithEmail:failure", task.exception)
-                        Toast.makeText(
-                            requireContext(), task.exception?.message.toString(),
-                            Toast.LENGTH_SHORT)
-                            .show()
                     }
                 }
         }

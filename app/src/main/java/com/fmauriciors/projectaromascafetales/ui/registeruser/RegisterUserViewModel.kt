@@ -2,6 +2,7 @@ package com.fmauriciors.projectaromascafetales.ui.registeruser
 
 import android.content.ContentValues.TAG
 import android.util.Log
+import android.util.Patterns
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -29,44 +30,34 @@ class RegisterUserViewModel : ViewModel() {
 
 
         fun validateFields(nameRegister: String, phone: String, emailRegister: String, passwordRegister: String, repasswordRegister: String) {
-            if(nameRegister.isEmpty()  || phone.isEmpty()  ||
-                emailRegister.isEmpty()  || passwordRegister.isEmpty() ||
-                repasswordRegister.isEmpty()){
-                msg.value = "Verifique que los campos Nombre, Teléfono, Email, Contraseña y Verificación de la contraseña estén completos"
-            }else{
-
-                /*
-               validated()
-                if (validatedEmail() && validatedPassword()){
-                    val nameUser: String = nameRegister.toString()
-                    val numberPhone: String = phone.toString()
-                    val email: String = emailRegister.toString()
-                    val password: String = passwordRegister.toString()
-                    val rePassword: String = repasswordRegister.toString()
-
-                    if (password == rePassword) {
-                         val user = User (
-                            nameUser = nameUser,
-                            //gender = gender,
-                            numberPhone = numberPhone,
-                            email = email,
-                            password = password)
-
-                       findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
-                    }else {
-
-                        msg.value = "Las contraseñas no coinciden"
+            if (nameRegister.isEmpty() ||
+                phone.isEmpty() ||
+                emailRegister.isEmpty() ||
+                passwordRegister.isEmpty() ||
+                repasswordRegister.isEmpty()
+            ) {
+                msg.value = "Verifique que los campos no esten vacios"
+            } else {
+                if (!Patterns.EMAIL_ADDRESS.matcher(emailRegister).matches()) {
+                    msg.value = "Debe digitar el email correctamente"
+                } else {
+                    if (passwordRegister.length < 6) {
+                        msg.value = "La contraseña debe ser mayor a 6 caracteres"
+                    } else {
+                        if (passwordRegister.equals(repasswordRegister)) {
+                            msg.value = "Las contraseñas no coinciden"
+                        }
+                        dataValidate.value = true
                     }
-                }else {
-                    msg.value = "Verifique correo y contraseña"
-                })*/
-                dataValidate.value = true
-                //findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
+
+                }
+
             }
+
         }
     fun saveRegister(nameUser: String, phone: String, email: String, password: String) {
-        GlobalScope.launch(Dispatchers.IO){
-            registerRepository.saveRegister(nameUser, phone, email,password)
+        GlobalScope.launch(Dispatchers.IO) {
+            registerRepository.saveRegister(nameUser, phone, email, password)
         }
 
     }

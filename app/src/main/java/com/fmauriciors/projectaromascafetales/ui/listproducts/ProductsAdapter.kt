@@ -9,6 +9,7 @@ import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.CardViewItemProductBinding
 import com.fmauriciors.projectaromascafetales.local.Product
 import com.fmauriciors.projectaromascafetales.server.ProductServer
+import com.squareup.picasso.Picasso
 import java.util.ArrayList
 
 class ProductsAdapter (
@@ -45,7 +46,7 @@ class ProductsAdapter (
                     favoriteNameProductTextView.text = product.nameProduct
                     favoriteNameCostoTextView.text = product.cost
                    // nameCardResumeTextView.text = product.resumePlantation
-                    //Picasso.get().load(book.urlPicture).into(pictureBookImageView)
+                    Picasso.get().load(product.urlPicture).into(favoriteProductImageView)
                 }
                 itemView.setOnClickListener {
                     Log.d ("ClicAdapter","en Iten")
