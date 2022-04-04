@@ -22,8 +22,7 @@ class RegisterUserViewModel : ViewModel() {
         private val dataValidate: MutableLiveData<Boolean> = MutableLiveData()
         val dataValidated: LiveData<Boolean> = dataValidate
 
-
-        fun validateFields(nameRegister: String, phone: String, emailRegister: String, passwordRegister: String, repasswordRegister: String, role1: Boolean, role2: Boolean) {
+        fun validateFields(nameRegister: String, phone: String, emailRegister: String, passwordRegister: String, repasswordRegister: String /* role1: Boolean, role2: Boolean*/) {
             if (nameRegister.isEmpty() || phone.isEmpty() || emailRegister.isEmpty() || passwordRegister.isEmpty() || repasswordRegister.isEmpty()){
                     msg.value = "Verifique que los campos no estén vacios"
             } else {
@@ -34,12 +33,13 @@ class RegisterUserViewModel : ViewModel() {
                         msg.value = "La contraseña debe ser mayor a 6 caracteres"
                     } else {
                         if (passwordRegister.equals(repasswordRegister)) {
-                            //msg.value = "Las contraseñas coincide"
+                            dataValidate.value = true
+                            /*msg.value = "Las contraseñas coincide"
                             if (role1 == false && role2 == false) {
                                 msg.value = "Seleccione comprador, vendedor o ambos"
                             } else {
                                 dataValidate.value = true
-                            }
+                            }*/
                         } else {
                             msg.value = "Las contraseñas no coinciden"
                         }
@@ -48,9 +48,9 @@ class RegisterUserViewModel : ViewModel() {
             }
         }
 
-    fun saveRegister(nameUser: String, phone: String, email: String, password: String, role1: Boolean, role2: Boolean) {
+    fun saveRegister(nameUser: String, phone: String, email: String, password: String /* role1: Boolean, role2: Boolean*/) {
         GlobalScope.launch(Dispatchers.IO) {
-            registerRepository.saveRegister(nameUser, phone, email, password, role1, role2)
+            registerRepository.saveRegister(nameUser, phone, email, password /*role1, role2*/)
         }
     }
 }

@@ -48,12 +48,12 @@ class RegisterUserFragment : Fragment() {
 
             registerUserButton.setOnClickListener {
 
-                if(rollBuyerSwitch.isChecked) {
+                /*if(rollBuyerSwitch.isChecked) {
                     role1 = true
                 }
                 if(rollSellerSwitch.isChecked){
                     role2 = true
-                }
+                }*/
 
                 registerUserViewModel.validateFields(
                     nameRegisterEditText.text.toString(),
@@ -61,8 +61,8 @@ class RegisterUserFragment : Fragment() {
                     emailRegisterEditText.text.toString(),
                     passwordRegisterEditText.text.toString(),
                     repasswordRegisterEditText.text.toString(),
-                    role1,
-                    role2
+                    //role1,
+                    //role2
                 )
 
                 //findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
@@ -80,7 +80,7 @@ class RegisterUserFragment : Fragment() {
             val email = emailRegisterEditText.text.toString()
             val password = passwordRegisterEditText.text.toString()
             //val repassword = repasswordRegisterEditText.text.toString()
-            registerUserViewModel.saveRegister(nameUser, phone, email, password, role1, role2)
+            registerUserViewModel.saveRegister(nameUser, phone, email, password /*role1, role2*/)
 
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
@@ -98,7 +98,7 @@ class RegisterUserFragment : Fragment() {
 
     private fun createUser(uid: String?, email: String) {
         val db = Firebase.firestore
-        val user = User(uid = uid, email = email, role1 = role1, role2 = role2)
+        val user = User(uid = uid, email = email /* role1 = role1, role2 = role2*/)
         uid?.let{uid ->
         db.collection("users").document(uid).set(user)
             .addOnSuccessListener {

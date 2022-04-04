@@ -7,24 +7,18 @@ import java.sql.Types.NULL
 
 class RegisterRepository {
 
-    suspend fun saveRegister(
-        nameUser: String,
-        phone: String,
-        email: String,
-        password: String,
-        role1: Boolean,
-        role2: Boolean
+    suspend fun saveRegister(nameUser: String, phone: String, email: String, password: String/* role1: Boolean, role2: Boolean*/) {
 
-    ) {
         val register = Register(
+
 
             id = NULL,
             nameUser = nameUser,
             phone = phone,
             email = email,
             password = password,
-            role1 = role1,
-            role2 = role2
+            //role1 = role1,
+            //role2 = role2
         )
 
         val registerDao : RegisterDao = AromasCafetalesProyect.database.RegisterDao()

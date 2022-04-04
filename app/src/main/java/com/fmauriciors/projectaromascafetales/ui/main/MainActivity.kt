@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.fmauriciors.projectaromascafetales.R
 import com.fmauriciors.projectaromascafetales.databinding.ActivityMainBinding
+import com.fmauriciors.projectaromascafetales.ui.deleteproduct.DeleteProductFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -26,8 +27,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
     override fun onBackPressed() {
-        super.onBackPressed()
-        Toast.makeText(this, "Cerrado", Toast.LENGTH_SHORT).show()
+        when(navController.currentDestination?.id) {
+            R.id.listProductsFragment, R.id.loginUserFragment -> finish()
+            R.id.shopingFragment, R.id.favoriteFragment, R.id.deleteProductFragment,
+            R.id.newProductFragment -> navController.navigate(R.id.listProductsFragment)
+            else -> navController.popBackStack()
+        }
+        //super.onBackPressed()
+        //Toast.makeText(this, "Cerrado", Toast.LENGTH_SHORT).show()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
