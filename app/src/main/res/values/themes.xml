@@ -39,7 +39,6 @@
     </style>
 
     <style name="FontStyle">
-        <item name="android:fontFamily">@font/caveat_brush</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">16sp</item>
     </style>
