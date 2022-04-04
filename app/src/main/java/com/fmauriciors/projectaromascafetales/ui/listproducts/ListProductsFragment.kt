@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.fmauriciors.projectaromascafetales.databinding.FragmentListProductsBinding
 import com.fmauriciors.projectaromascafetales.local.Product
 import com.fmauriciors.projectaromascafetales.server.ProductServer
+import com.fmauriciors.projectaromascafetales.ui.detailproduct.DetailProductFragmentArgs
+import com.fmauriciors.projectaromascafetales.ui.detailproduct.DetailProductFragmentDirections
 
 class ListProductsFragment : Fragment() {
 
@@ -63,9 +65,7 @@ class ListProductsFragment : Fragment() {
     private fun onProductItemClicked(product: ProductServer) {
         findNavController().navigate(ListProductsFragmentDirections.actionListProductsFragmentToDetailProductFragment(product))
        // product.nameProduct?.let {Log.d("ClicproductView", it)}
-
     }
-
     private fun onLoadProductsFromServerDoneSubscribe(productsListFromServerLoaded: ArrayList<ProductServer>) { // Firebase
         productsListFromServer = productsListFromServerLoaded
         productsAdapter.appendItems(productsListFromServer)
@@ -75,7 +75,6 @@ class ListProductsFragment : Fragment() {
         productsList = productsListLoaded
         //productsAdapter.appendItems(productsList)
         Log.d("Hello","data")
-
     }
 
 }

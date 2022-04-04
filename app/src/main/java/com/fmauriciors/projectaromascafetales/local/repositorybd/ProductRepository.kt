@@ -1,5 +1,6 @@
 package com.fmauriciors.projectaromascafetales.local.repositorybd;
 
+import android.provider.ContactsContract
 import com.fmauriciors.projectaromascafetales.AromasCafetalesProyect
 import com.fmauriciors.projectaromascafetales.local.Product;
 import com.fmauriciors.projectaromascafetales.local.ProductDao
@@ -12,6 +13,7 @@ class ProductRepository {
         cost: String,
         resumePlantation: String
 
+
     ) {
         val product = Product(
 
@@ -19,6 +21,7 @@ class ProductRepository {
             nameProduct = nameProduct,
             cost = cost,
             resumePlantation = resumePlantation
+
         )
 
         val productDao : ProductDao =AromasCafetalesProyect.database.ProductDao()

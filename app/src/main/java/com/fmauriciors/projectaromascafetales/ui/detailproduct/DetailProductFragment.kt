@@ -4,8 +4,10 @@ import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
 
@@ -26,8 +28,15 @@ class DetailProductFragment : Fragment() {
         detailProductBinding = FragmentDetailProductBinding.inflate(inflater, container, false)
         detailProductViewModel = ViewModelProvider(this)[DetailProductViewModel::class.java]
         return detailProductBinding.root
-    }
 
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onOptionsItemSelected(item)
+        findNavController().navigate(DetailProductFragmentDirections.actionDetailProductFragmentToListProductsFragment())
+        return true
+
+
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -38,6 +47,8 @@ class DetailProductFragment : Fragment() {
             favoriteNameCostoTextView.text = product.cost
         }
     }
+
+
 
 }
 

@@ -203,7 +203,6 @@
             style="@style/FontStyleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
@@ -215,8 +214,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/roll_buyer_switch"
-            app:layout_constraintVertical_bias="0.224"
             tools:ignore="TextContrastCheck" />
 
         <ImageView
@@ -230,29 +227,6 @@
             app:layout_constraintTop_toBottomOf="@+id/separator_register_image_view"
             app:srcCompat="@drawable/user"
             tools:ignore="ImageContrastCheck" />
-
-        <Switch
-            android:id="@+id/roll_buyer_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:minHeight="48dp"
-            android:text="@string/rollComprador"
-            app:layout_constraintStart_toStartOf="@+id/repassword_register_text_input_layout"
-            app:layout_constraintTop_toBottomOf="@+id/repassword_register_text_input_layout" />
-
-        <Switch
-            android:id="@+id/roll_seller_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="16dp"
-            android:minHeight="48dp"
-            android:text="@string/rollVendedor"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.085"
-            app:layout_constraintStart_toEndOf="@+id/roll_buyer_switch"
-            app:layout_constraintTop_toBottomOf="@+id/repassword_register_text_input_layout" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

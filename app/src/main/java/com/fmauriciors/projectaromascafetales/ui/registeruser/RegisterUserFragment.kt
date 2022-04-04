@@ -22,8 +22,8 @@ class RegisterUserFragment : Fragment() {
     private lateinit var registerUserViewModel: RegisterUserViewModel
     private lateinit var registerUserBinding: FragmentRegisterUserBinding
     private lateinit var auth: FirebaseAuth
-    var role1:Boolean = false
-    var role2:Boolean = false
+    //var role1:String = ""
+    //var role2:String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -48,21 +48,20 @@ class RegisterUserFragment : Fragment() {
 
             registerUserButton.setOnClickListener {
 
-                /*if(rollBuyerSwitch.isChecked) {
-                    role1 = true
+               /* if(roleSellerCheckBox.isChecked) {
+                    role1 = "Vendedor"
                 }
-                if(rollSellerSwitch.isChecked){
-                    role2 = true
+                if(roleBuyerCheckBox.isChecked){
+                    role2 = "Comprador"
                 }*/
-
                 registerUserViewModel.validateFields(
                     nameRegisterEditText.text.toString(),
                     phoneRegisterEditText.text.toString(),
                     emailRegisterEditText.text.toString(),
                     passwordRegisterEditText.text.toString(),
-                    repasswordRegisterEditText.text.toString(),
-                    //role1,
-                    //role2
+                    repasswordRegisterEditText.text.toString()
+                    //roleBuyerCheckBox.text.toString(),
+                    //roleSellerCheckBox.text.toString()
                 )
 
                 //findNavController().navigate(RegisterUserFragmentDirections.actionRegisterUserFragmentToListRegisterFragment())
@@ -79,8 +78,10 @@ class RegisterUserFragment : Fragment() {
             val phone = phoneRegisterEditText.text.toString()
             val email = emailRegisterEditText.text.toString()
             val password = passwordRegisterEditText.text.toString()
+           // val role1 = roleBuyerCheckBox.text.toString()
+           // val role2 = roleSellerCheckBox.text.toString()
             //val repassword = repasswordRegisterEditText.text.toString()
-            registerUserViewModel.saveRegister(nameUser, phone, email, password /*role1, role2*/)
+            registerUserViewModel.saveRegister(nameUser, phone, email, password)
 
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
@@ -98,7 +99,7 @@ class RegisterUserFragment : Fragment() {
 
     private fun createUser(uid: String?, email: String) {
         val db = Firebase.firestore
-        val user = User(uid = uid, email = email /* role1 = role1, role2 = role2*/)
+        val user = User(uid = uid, email = email)
         uid?.let{uid ->
         db.collection("users").document(uid).set(user)
             .addOnSuccessListener {

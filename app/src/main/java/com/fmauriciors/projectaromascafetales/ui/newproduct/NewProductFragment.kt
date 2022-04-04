@@ -50,9 +50,14 @@ class NewProductFragment : Fragment() {
                     nameProductEditText.text.toString(),
                     costProductEditText.text.toString(),
                     resumeProductEditText.text.toString()
+
                 )
             }
+            photoImageView.setOnClickListener {
+                dispatchTakePictureIntent()
+            }
         }
+
 
     }
     private fun dispatchTakePictureIntent() {
@@ -79,8 +84,9 @@ class NewProductFragment : Fragment() {
 
             //newProductViewModel.saveProduct(nameProduct, cost, resumePlantation)
             newProductViewModel.saveProductInServer(nameProduct, cost, resumePlantation)
-        }
+            findNavController().navigate(NewProductFragmentDirections.actionNewProductFragmentToListProductsFragment())
 
+        }
     }
 
     private fun onMsgDoneSubscribe(msg: String?) {
