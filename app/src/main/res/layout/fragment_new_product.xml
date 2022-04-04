@@ -13,15 +13,25 @@ android:layout_height="wrap_content">
         tools:context=".ui.newproduct.NewProductFragment">
 
         <ImageView
+            android:id="@+id/separatorBox_image_view"
+            android:layout_width="416dp"
+            android:layout_height="47dp"
+            app:layoutDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/box_bottom"/>
+
+        <ImageView
             android:id="@+id/oval_pink_image_view"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/circulo"
             android:backgroundTint="@color/pinkOvalColor"
             android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/save_product_button"
-            app:srcCompat="@drawable/circulo"
-            tools:layout_editor_absoluteX="361dp" />
+            app:srcCompat="@drawable/circulo" />
 
         <ImageView
             android:id="@+id/oval_blue_image_view"
@@ -50,16 +60,29 @@ android:layout_height="wrap_content">
             app:srcCompat="@drawable/circulo" />
 
         <ImageView
+            android:id="@+id/containerBox_image_view"
+            android:layout_width="412dp"
+            android:layout_height="408dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/box_bottom"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separatorBox_image_view"
+            app:srcCompat="@drawable/box_bottom" />
+
+        <ImageView
             android:id="@+id/oval_new_product_image_View"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/circulo"
             android:backgroundTint="@color/toolBarProduct"
             android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/circulo"
-            tools:layout_editor_absoluteY="114dp" />
+            app:layout_constraintTop_toBottomOf="@+id/separatorBox_image_view"
+            app:srcCompat="@drawable/circulo" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -69,6 +92,7 @@ android:layout_height="wrap_content">
             app:layout_constraintBottom_toBottomOf="@+id/oval_new_product_image_View"
             app:layout_constraintEnd_toEndOf="@+id/oval_new_product_image_View"
             app:layout_constraintStart_toStartOf="@+id/oval_new_product_image_View"
+            app:layout_constraintTop_toTopOf="@+id/oval_new_product_image_View"
             app:srcCompat="@drawable/sologlobos" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -159,10 +183,11 @@ android:layout_height="wrap_content">
             android:layout_height="55dp"
             app:layout_constraintBottom_toTopOf="@+id/name_text_input_layout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.78"
-            app:layout_constraintStart_toEndOf="@+id/oval_new_product_image_View"
-            app:layout_constraintTop_toBottomOf="@+id/oval_new_product_image_View"
-            app:layout_constraintVertical_bias="1.0"
+            app:layoutDescription="@string/todo"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="@+id/oval_new_product_image_View"
+            app:layout_constraintTop_toBottomOf="@+id/separatorBox_image_view"
+            app:layout_constraintVertical_bias="0.798"
             app:srcCompat="@drawable/ic_camera" />
 
 

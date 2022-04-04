@@ -14,16 +14,9 @@
 
     <string name="app_name">Aromas Cafetales</string>
     <string name="image_splash_ac">Splash</string>
-    <string name="email">Correo electronico</string>
-    <string name="password">Contraseña</string>
     <string name="sign_in">Inciar Sesión</string>
-    <string name="name">Nombre completo</string>
-    <string name="telephone">Numero de teléfono</string>
-    <string name="repeat_password">Repita la contraseña</string>
-    <string name="resgister">Registrarse</string>
     <string name="do_not_have_account"><u>¿No tienes cuenta? ¡Registrate!</u></string>
     <string name="sing_out">Salir de la sesión</string>
-    <string name="main">Main</string>
     <string name="resume_plantation">Breve descripcion</string>
     <string name="product_name">Nombre del producto</string>
     <string name="cost">Precio del producto</string>
@@ -31,25 +24,21 @@
     <string name="title_list">casa</string>
     <string name="title_favoritos">favoritos</string>
     <string name="title_carrito">carrito</string>
-    <string name="example_tittle">Example Tittle</string>
-    <string name="example_product">Example Product</string>
     <string name="example_brand">Example Brand</string>
     <string name="save_product">Guardar</string>
     <string name="name_resume">Resumen finca</string>
     <string name="search_product">Busqueda del producto</string>
     <string name="search_button">Buscar</string>
-    <string name="search">Buscar</string>
     <string name="warning_title">Advertencia</string>
     <string name="delete_product_msg">¿Desea eliminar el producto %s de la marca %s?</string>
     <string name="cancel">Cancelar</string>
     <string name="accept">Aceptar</string>
-    <string name="update">Actualizar</string>
     <string name="name_register">Example_register</string>
-    <string name="name_user">Example_user</string>
     <string name="name_phone">example_phone</string>
     <string name="todo">TODO</string>
     <string name="rollComprador">comprador</string>
     <string name="rollVendedor">Vendedor</string>
+    <string name="favoriteProduct">favorite Product</string>
 
 
 </resources>

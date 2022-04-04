@@ -14,9 +14,7 @@
         app:cardElevation="4dp"
         app:cardMaxElevation="4dp"
         >
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id='@+id/widgetConstraint_CardView'
             android:layout_width="match_parent"
             android:layout_height="131dp"
             android:background="@color/carview"
@@ -28,7 +26,6 @@
                 android:layout_height="115dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/circulo"
-                android:contentDescription="@string/todo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/sologlobos" />
@@ -38,34 +35,34 @@
                 style="@style/TextViewTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/example_brand"
-                android:textColor="@color/black60"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/favoriteProduct"
                 app:layout_constraintStart_toEndOf="@+id/favorite_product_image_view"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="TextContrastCheck" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/favorite_name_costo_text_view"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/favorite_price_product_text_view"
+                android:layout_width="158dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/zeyada"
                 android:text="@string/cost"
                 android:textColor="@color/black60"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/favorite_name_product_text_view"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/favorite_name_product_text_view"
-                app:layout_constraintTop_toBottomOf="@+id/favorite_name_product_text_view"
-                tools:ignore="MissingConstraints,TextContrastCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/favorite_name_product_text_view" />
 
             <RatingBar
                 android:id="@+id/favorite_ratingBar_popularity"
                 android:layout_width="241dp"
                 android:layout_height="61dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@+id/favorite_product_image_view"
-                app:layout_constraintTop_toBottomOf="@+id/favorite_name_costo_text_view"
+                app:layout_constraintStart_toStartOf="@+id/favorite_price_product_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/favorite_price_product_text_view"
                 tools:ignore="SpeakableTextPresentCheck" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
